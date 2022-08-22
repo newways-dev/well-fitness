@@ -1,0 +1,14 @@
+.city {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .cityTitle {
+    margin-right: 5px;
+  }
+
+  .arrow {
+    width: 10px;
+    height: 10px;
+  }
+}

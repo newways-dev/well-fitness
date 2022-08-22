@@ -1,0 +1,26 @@
+.dillers {
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  padding-right: 30px;
+  border-right: 1px solid rgba(133, 143, 164, 0.15);
+
+  .link {
+    color: #909cb5;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+  .button {
+    width: 142px;
+    height: 37px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    background: #384255;
+    border-radius: 6px;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+  }
+}

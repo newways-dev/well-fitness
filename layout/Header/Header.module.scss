@@ -1,0 +1,37 @@
+.header {
+  padding: 0 10px;
+
+  width: 100vw;
+  height: 80px;
+  background: var(--dark-blue);
+  color: #858fa4;
+  font-weight: 400;
+  font-size: 14px;
+
+  display: grid;
+  grid-template-columns:
+    [start] 280px [logoend] 50px [citystart] auto [cityend] 1fr [dillersstart]
+    auto [dillersend] auto [callstart] auto [callend] auto [loginstart] auto [loginend];
+  align-items: center;
+}
+
+.logo {
+  svg {
+    width: 280px;
+    height: 30px;
+  }
+  grid-column: start / logoend;
+}
+
+.city {
+  grid-column: citystart / cityend;
+}
+.dillers {
+  grid-column: dillersstart / dillersend;
+}
+.call {
+  grid-column: callstart / callend;
+}
+.login {
+  grid-column: loginstart / loginend;
+}

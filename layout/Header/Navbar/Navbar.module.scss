@@ -1,0 +1,48 @@
+.navbar {
+  padding: 0 10px;
+  width: 100vw;
+  height: 80px;
+  background: var(--dark-blue);
+  border-top: 1px solid rgba(133, 143, 164, 0.15);
+
+  // display: grid;
+  // align-items: center;
+  // display: flex;
+  // align-items: center;
+  display: grid;
+  grid-template-columns:
+    [start] auto [buttonend] auto [searchstart] auto [searchend] auto
+    [linksstart] auto [linksend] 1fr [iconsstart] auto [iconsend];
+  align-items: center;
+}
+
+.button {
+  grid-column: start / buttonend;
+  width: 127px;
+  height: 49px;
+  border-radius: 4px;
+}
+
+.search {
+  grid-column: searchstart / searchend;
+}
+
+.links {
+  grid-column: linksstart / linksend;
+}
+
+.menuIcon {
+  margin-right: 5px;
+}
+
+.icons {
+  grid-column: iconsstart / iconsend;
+
+  svg {
+    cursor: pointer;
+  }
+
+  svg:not(:last-child) {
+    margin-right: 50px;
+  }
+}

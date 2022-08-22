@@ -1,0 +1,36 @@
+.nav {
+  padding: 0 10px;
+  width: 100vw;
+  height: 45px;
+  background: var(--nav-gray);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+
+  display: grid;
+  align-items: center;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.home {
+  cursor: pointer;
+  padding-right: 30px;
+  border-right: 1px solid var(--gray);
+}
+.arrow {
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+}
+.fitness {
+  cursor: pointer;
+  margin-left: 30px;
+}
