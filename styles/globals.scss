@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f6f8;
+  color: var(--dark-blue);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #1a1a25;
+  --red: #f53b49;
+  --red-hover: #e32a38;
+  --white: #f7f7f7;
+  --gray: #909cb5;
+  --dark-gray: #384255;
+  --nav-gray: #2a2c38;
+}
