@@ -1,6 +1,5 @@
 import { NavbarProps } from './Navbar.props'
 import { Button, Icon, Links, Search } from '../../../components'
-import MenuIcon from './menu.svg'
 import styles from './Navbar.module.scss'
 
 export const Navbar = ({}: NavbarProps): JSX.Element => {
@@ -13,7 +12,7 @@ export const Navbar = ({}: NavbarProps): JSX.Element => {
       <Search className={styles.search} />
       <Links className={styles.links} />
       <div className={styles.icons}>
-        <Icon name='compare' />
+        <Icon className={styles.icon} name='compare' />
         <Icon name='favorites' />
         <Icon name='cart' />
       </div>
