@@ -1,5 +1,25 @@
 .layout {
-  // width: 1410px;
-  min-height: 100vh;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'body'
+    'footer';
+}
+
+.header {
+  grid-column: header;
+}
+
+.body {
+  width: 100%;
+  padding: 0 10px;
+  grid-column: body;
   margin: 0 auto;
+}
+
+.footer {
+  grid-column: footer;
 }

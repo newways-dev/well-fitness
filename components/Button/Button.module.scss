@@ -1,14 +1,17 @@
 .button {
   cursor: pointer;
   border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 4px;
 }
 
 .primary {
   background: var(--red);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
   color: #fff;
 }
 .outlined {
+  color: var(--red);
+  border: 1px solid var(--red);
 }

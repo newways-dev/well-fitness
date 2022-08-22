@@ -4,8 +4,9 @@ import { Nav } from './Nav/Nav'
 import Logo from './logo.svg'
 
 import styles from './Header.module.scss'
+import { HeaderProps } from './Header.props'
 
-export const Header = (): JSX.Element => {
+export const Header = ({}: HeaderProps): JSX.Element => {
   return (
     <>
       <div className={styles.header}>
