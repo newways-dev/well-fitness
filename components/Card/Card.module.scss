@@ -1,0 +1,19 @@
+.card {
+  background-color: #f0f1f7;
+  position: relative;
+}
+
+.primary {
+  background-color: var(--dark-blue);
+}
+
+.title {
+  max-width: 150px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  z-index: 55;
+}

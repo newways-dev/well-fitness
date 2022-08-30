@@ -1,5 +1,6 @@
 import { IconProps } from './Icon.props'
 
+import ArrowDown from './icons/arrow-down.svg'
 import Arrow from './icons/arrow.svg'
 import User from './icons/user.svg'
 import Menu from './icons/menu.svg'
@@ -10,6 +11,8 @@ import Cart from './icons/cart.svg'
 
 export const Icon = ({ name, className }: IconProps): JSX.Element => {
   switch (name) {
+    case 'arrow-down':
+      return <>{<ArrowDown className={className} />}</>
     case 'arrow':
       return <>{<Arrow className={className} />}</>
     case 'user':
