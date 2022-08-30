@@ -1,3 +1,4 @@
+import { FitnessClubsProps } from './FitnessClubs.props'
 import { Button, Card, Htag } from '../../components'
 import styles from './FitnessClubs.module.scss'
 
@@ -8,7 +9,6 @@ import four from './images/four.png'
 import five from './images/five.png'
 import six from './images/six.png'
 import seven from './images/seven.png'
-import { FitnessClubsProps } from './FitnessClubs.props'
 
 export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
   return (

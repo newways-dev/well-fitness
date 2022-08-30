@@ -11,4 +11,5 @@ export interface IconProps
     | 'arrow-down'
     | 'arrow'
     | 'menu'
+    | 'star'
 }

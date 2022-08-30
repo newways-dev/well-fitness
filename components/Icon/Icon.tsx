@@ -8,6 +8,7 @@ import Search from './icons/search.svg'
 import Favorites from './icons/favorites.svg'
 import Compare from './icons/compare.svg'
 import Cart from './icons/cart.svg'
+import Star from './icons/star.svg'
 
 export const Icon = ({ name, className }: IconProps): JSX.Element => {
   switch (name) {
@@ -27,6 +28,8 @@ export const Icon = ({ name, className }: IconProps): JSX.Element => {
       return <>{<Favorites className={className} />}</>
     case 'cart':
       return <>{<Cart className={className} />}</>
+    case 'star':
+      return <>{<Star className={className} />}</>
     default:
       return <></>
   }

@@ -1,15 +1,28 @@
 .card {
   background-color: #f0f1f7;
   position: relative;
+  cursor: pointer;
+
+  transition: all ease 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .title {
   max-width: 150px;
   position: absolute;
-  top: 35px;
+  top: 20px;
   left: 30px;
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
   z-index: 55;
+}
+
+.image {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
 }
