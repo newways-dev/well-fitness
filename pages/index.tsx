@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { withLayout } from '../layout/Layout'
-import { Equipments, FitnessClubs, Slider } from '../page-components'
+import { Discount, Equipments, FitnessClubs, Slider } from '../page-components'
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +8,7 @@ const Home: NextPage = () => {
       <Slider />
       <Equipments />
       <FitnessClubs />
+      <Discount />
     </>
   )
 }
