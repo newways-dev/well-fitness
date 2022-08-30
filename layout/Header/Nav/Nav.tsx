@@ -8,13 +8,13 @@ export const Nav = (): JSX.Element => {
         <div className={styles.home}>
           <span>
             Для дома
-            <Icon className={styles.arrow} name='arrow' />
+            <Icon className={styles.arrow} name='arrow-down' />
           </span>
         </div>
         <div className={styles.fitness}>
           <span>
             Для фитнес клуба
-            <Icon className={styles.arrow} name='arrow' />
+            <Icon className={styles.arrow} name='arrow-down' />
           </span>
         </div>
       </div>

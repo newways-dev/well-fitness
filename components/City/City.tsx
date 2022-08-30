@@ -7,7 +7,7 @@ export const City = ({ city }: CityProps): JSX.Element => {
   return (
     <div className={styles.city}>
       <span className={styles.cityTitle}>{city}</span>
-      <Icon className={styles.arrow} name='arrow' />
+      <Icon className={styles.arrow} name='arrow-down' />
     </div>
   )
 }

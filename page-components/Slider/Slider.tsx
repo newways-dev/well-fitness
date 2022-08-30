@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { Button, Htag } from '../../components'
+import { Button, Htag, Icon } from '../../components'
 import image from './images/fitness-girl.png'
 import Vector from './images/vector.svg'
 import styles from './Slider.module.scss'
+import { SliderButton } from './SliderButton/SliderButton'
 
 export const Slider = (): JSX.Element => {
   return (
@@ -16,13 +17,15 @@ export const Slider = (): JSX.Element => {
             <span className={styles.bold}>Бег с нулевой ударной нагрузкой</span>{' '}
             на суставы
           </p>
-          <Button variant='outlined' className={styles.button}>
-            Узнать больше
-          </Button>
+          <Button variant='outlined'>Узнать больше</Button>
         </div>
         <Image className={styles.image} src={image} alt='image' />
       </div>
       <Vector className={styles.vector} />
+      <div className={styles.buttons}>
+        <SliderButton />
+        <SliderButton className={styles.rightButton} />
+      </div>
     </div>
   )
 }

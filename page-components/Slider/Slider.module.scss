@@ -6,8 +6,6 @@
   min-height: 500px;
   padding: 0 40px;
   position: relative;
-
-  margin-bottom: 100px;
 }
 
 .wrapper {
@@ -37,19 +35,6 @@
   font-weight: bold;
 }
 
-.button {
-  width: 147px;
-  height: 42px;
-
-  transition: all ease 0.3s;
-
-  &:hover {
-    color: #fff;
-    background: var(--red-hover);
-    border: none;
-  }
-}
-
 .image {
   width: 648px;
   height: 500px;
@@ -64,4 +49,18 @@
   height: 90px;
   width: 800px;
   z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  right: 200px;
+  z-index: 3;
+
+  .rightButton {
+    transform: rotate(-180deg);
+    margin-left: 10px;
+  }
 }
