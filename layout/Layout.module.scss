@@ -13,10 +13,14 @@
   grid-column: header;
 }
 
+.slider {
+  padding: 0 60px;
+}
+
 .body {
-  width: 100%;
-  padding: 0 200px;
   grid-column: body;
+  max-width: 1410px;
+  width: 100%;
   margin: 0 auto;
 }
 

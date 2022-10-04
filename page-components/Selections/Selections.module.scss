@@ -1,12 +1,19 @@
-.discount {
+.selections {
   position: relative;
-  padding: 0 40px;
   margin-top: 120px;
 }
 
 .wrapper {
+  margin-top: 35px;
   display: flex;
   align-items: center;
+  max-width: 1410px;
+
+  overflow-y: scroll;
+}
+
+.productCard {
+  min-width: 300px;
 }
 
 .sliderButton {

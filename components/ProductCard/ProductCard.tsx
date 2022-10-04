@@ -7,6 +7,7 @@ import { Htag } from '../Htag/Htag'
 import { InStock } from '../InStock/InStock'
 import { Rating } from '../Rating/Rating'
 import { Button } from '../Button/Button'
+import clsx from 'clsx'
 
 export const ProductCard = ({
   badges,
@@ -18,11 +19,10 @@ export const ProductCard = ({
   price,
   oldPrice,
   button,
+  className,
 }: ProductCardProps): JSX.Element => {
-  badges && badges.map((i) => console.log(i))
-
   return (
-    <article className={styles.productCard}>
+    <article className={clsx(styles.productCard, className)}>
       <div className={styles.top}>
         {badges && (
           <div className={styles.badges}>
@@ -33,25 +33,25 @@ export const ProductCard = ({
         )}
         {icons && (
           <div className={styles.icons}>
-            <Icon className={styles.icon} name='compare' />
-            <Icon className={styles.icon} name='favorites' />
+            <Icon className={styles.icon} name="compare" />
+            <Icon className={styles.icon} name="favorites" />
           </div>
         )}
       </div>
-      <Image src={image} alt='' />
-      {inStock && <InStock value={inStock} />}
-      <Htag className={styles.title} tag='h3'>
+      <Image src={image} alt="" />
+      <InStock className={styles.stock} value={inStock} />
+      <Htag className={styles.title} tag="h3">
         {title}
       </Htag>
-      <Rating />
+      <Rating className={styles.rating} />
       <div className={styles.info}>
         <div className={styles.priceContainer}>
           <span className={styles.price}>{price}</span>
           {oldPrice && <span className={styles.oldPrice}>{oldPrice}</span>}
         </div>
         {button && (
-          <Button className={styles.button} variant='primary'>
-            <Icon name='cart' /> Купить
+          <Button className={styles.button} variant="primary">
+            <Icon name="cart" /> Купить
           </Button>
         )}
       </div>
