@@ -8,12 +8,12 @@ export const Card = ({ title, image, className }: CardProps): JSX.Element => {
   return (
     <div className={clsx(className, styles.card)}>
       <div>
-        <Htag tag='h3' className={styles.title}>
+        <Htag tag="h3" className={styles.title}>
           {title}
         </Htag>
       </div>
       <div className={styles.image}>
-        <Image src={image} alt='' />
+        <Image src={image} alt="" />
       </div>
     </div>
   )

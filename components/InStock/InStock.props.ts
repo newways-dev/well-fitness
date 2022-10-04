@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { InStockEnum } from '../ProductCard/ProductCard.props'
 
 export interface InStockProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  value: -1 | 0 | 1 | 2
+  value: InStockEnum
 }

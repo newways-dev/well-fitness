@@ -1,0 +1,18 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.tab {
+  font-weight: 800;
+  font-size: 20px;
+  color: #828282;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--dark-blue);
+}

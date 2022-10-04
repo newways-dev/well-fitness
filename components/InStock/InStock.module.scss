@@ -1,14 +1,32 @@
-.inStock {
+.no {
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 12px;
   font-weight: 500;
 }
-
-.no {
-  color: var(--red);
-}
 .little {
+  font-size: 12px;
+  font-weight: 500;
   color: var(--orange);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .ok {
+  font-size: 12px;
+  font-weight: 500;
   color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.coming {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

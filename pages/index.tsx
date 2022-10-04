@@ -1,14 +1,21 @@
 import type { NextPage } from 'next'
 import { withLayout } from '../layout/Layout'
-import { Discount, Equipments, FitnessClubs, Slider } from '../page-components'
+import {
+  Selections,
+  Equipments,
+  FitnessClubs,
+  IdeasAndPicks,
+} from '../page-components'
 
 const Home: NextPage = () => {
   return (
     <>
-      <Slider />
-      <Equipments />
-      <FitnessClubs />
-      <Discount />
+      <div className="main">
+        <Equipments />
+        <FitnessClubs />
+        <Selections />
+      </div>
+      <IdeasAndPicks />
     </>
   )
 }

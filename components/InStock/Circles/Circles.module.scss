@@ -1,0 +1,36 @@
+.circles {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.inStock {
+  background: var(--green);
+}
+.littleLeft {
+  &:nth-child(1) {
+    background: var(--orange);
+  }
+  &:nth-child(2) {
+    background: none;
+    border: 1px solid var(--orange);
+  }
+  &:nth-child(3) {
+    background: none;
+    border: 1px solid var(--orange);
+  }
+}
+.notInStock {
+  background: none;
+  border: 1px solid var(--red);
+}
+.comming {
+  background: var(--light-blue);
+}

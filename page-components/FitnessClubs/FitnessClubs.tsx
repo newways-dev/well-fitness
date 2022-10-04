@@ -13,29 +13,41 @@ import seven from './images/seven.png'
 export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
   return (
     <div className={styles.fitnessClubs}>
-      <Htag tag='h2'>Для фитнес клубов</Htag>
+      <Htag tag="h2">Для фитнес клубов</Htag>
       <div className={styles.wrapper}>
         <Card
           className={styles.one}
-          title='Профессиональные кардиотренажеры'
+          title="Профессиональные кардиотренажеры"
           image={one}
         />
         <Card
           className={styles.two}
-          title='Грузоблочные тренажеры'
+          title="Грузоблочные тренажеры"
           image={two}
         />
         <Card
           className={styles.three}
-          title='Тренажеры на свободных весах'
+          title="Тренажеры на свободных весах"
           image={three}
         />
-        <Card title='Функциональный тренинг' image={four} />
-        <Card title='Wellness, СПА, Массаж' image={five} />
-        <Card title='Спортивная медицина и реабилитация' image={six} />
-        <Card title='Свободные веса' image={seven} />
+        <Card
+          className={styles.four}
+          title="Функциональный тренинг"
+          image={four}
+        />
+        <Card
+          className={styles.five}
+          title="Wellness, СПА, Массаж"
+          image={five}
+        />
+        <Card
+          className={styles.six}
+          title="Спортивная медицина и реабилитация"
+          image={six}
+        />
+        <Card className={styles.seven} title="Свободные веса" image={seven} />
       </div>
-      <Button className={styles.button} variant='outlined'>
+      <Button className={styles.button} variant="outlined">
         Все категории
       </Button>
     </div>
