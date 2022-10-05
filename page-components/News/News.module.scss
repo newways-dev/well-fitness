@@ -1,0 +1,41 @@
+.news {
+  margin-top: 120px;
+  margin-bottom: 60px;
+
+  .wrapper {
+    .newsContainer {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      margin-bottom: 60px;
+
+      .newsItem {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .image {
+          position: relative;
+          height: 260px;
+          width: 315px;
+        }
+        .title {
+          color: var(--dark-gray);
+          font-weight: 800;
+          font-size: 20px;
+        }
+        .desc {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+        }
+        .date {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
