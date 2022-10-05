@@ -9,11 +9,12 @@ import four from './images/four.png'
 import five from './images/five.png'
 import six from './images/six.png'
 import seven from './images/seven.png'
+import { Title } from '../Title/Title'
 
 export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
   return (
     <div className={styles.fitnessClubs}>
-      <Htag tag="h2">Для фитнес клубов</Htag>
+      <Title title="Для фитнес клубов" />
       <div className={styles.wrapper}>
         <Card
           className={styles.one}

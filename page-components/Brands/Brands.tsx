@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Button, Tabs, Title } from '../../components'
+import { Button } from '../../components'
+import { Title } from '../Title/Title'
 import styles from './Brands.module.scss'
 import { brands } from './images'
 
@@ -16,7 +17,7 @@ export const Brands = () => {
   return (
     <div className={styles.brands}>
       <div className={styles.wrapper}>
-        <Title className={styles.title}>Популярные бренды</Title>
+        <Title title="Популярные бренды" />
         <div className={styles.categories}>
           {categories.map((categorie) => (
             <span className={styles.categorie} key={categorie}>
