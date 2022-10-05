@@ -1,0 +1,43 @@
+.about {
+  margin-top: 120px;
+  width: 100%;
+
+  .wrapper {
+    width: 100%;
+    padding-left: 14%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    .info {
+      max-width: 530px;
+      display: flex;
+      flex-direction: column;
+
+      button {
+        width: 200px;
+      }
+
+      .title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: block;
+        color: var(--dark-gray);
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 140%;
+      }
+      .desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--dark-gray);
+        margin-bottom: 50px;
+      }
+    }
+    .map {
+      width: calc(100% - 530px);
+      height: 100%;
+    }
+  }
+}

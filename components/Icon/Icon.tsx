@@ -42,6 +42,7 @@ export const Icon = ({ name, className }: IconProps): JSX.Element => {
       return <>{<CallService className={className} />}</>
     case 'help':
       return <>{<Help className={className} />}</>
+
     default:
       return <></>
   }

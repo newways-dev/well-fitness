@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './IdeasAndPicks.module.scss'
 import { Button, Title } from '../../components'
+import { Title as SectionTitle } from '../Title/Title'
 
 import img from './images/ideas-img.png'
 import img2 from './images/img2.png'
@@ -16,7 +17,7 @@ export const IdeasAndPicks = ({}: IdeasAndPicksProps) => {
   return (
     <div className={styles.ideasAndPicks}>
       <div className={styles.wrapper}>
-        <Title className={styles.title}>Идеи и подборки</Title>
+        <SectionTitle className={styles.title} title="Идеи и подборки" />
         <div className={styles.cards}>
           <div className={styles.card}>
             <div className={styles.shape}>

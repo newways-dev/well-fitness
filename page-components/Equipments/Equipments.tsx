@@ -1,6 +1,7 @@
 import { EquipmentsProps } from './Equipments.props'
+import { Title } from '../Title/Title'
+import { Button, Card } from '../../components'
 import styles from './Equipments.module.scss'
-import { Button, Card, Htag } from '../../components'
 
 import one from './images/one.png'
 import two from './images/two.png'
@@ -16,7 +17,7 @@ import ten from './images/ten.png'
 export const Equipments = ({}: EquipmentsProps): JSX.Element => {
   return (
     <div className={styles.equipments}>
-      <Htag tag="h2">Тренажеры для дома</Htag>
+      <Title title="Тренажеры для дома" />
       <div className={styles.wrapper}>
         <Card className={styles.one} title="Беговые дорожки" image={one} />
         <Card

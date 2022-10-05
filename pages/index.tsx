@@ -7,6 +7,8 @@ import {
   IdeasAndPicks,
   Brands,
   Advantages,
+  About,
+  CtA,
 } from '../page-components'
 
 const Home: NextPage = () => {
@@ -21,6 +23,10 @@ const Home: NextPage = () => {
       <div className="main">
         <Brands />
         <Advantages />
+      </div>
+      <About />
+      <div className="main">
+        <CtA />
       </div>
     </>
   )
