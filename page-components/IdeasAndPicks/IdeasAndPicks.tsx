@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './IdeasAndPicks.module.scss'
-import { Title } from '../../components'
+import { Button, Title } from '../../components'
 
 import img from './images/ideas-img.png'
 import img2 from './images/img2.png'
@@ -66,11 +66,14 @@ export const IdeasAndPicks = ({}: IdeasAndPicksProps) => {
                 </span>
               </Title>
             </div>
-            <div className={styles.secondImg}>
+            <div className={styles.thirdImg}>
               <Image src={img3} alt="" />
             </div>
           </div>
         </div>
+        <Button className={styles.button} variant="outlined">
+          Полная подборка
+        </Button>
       </div>
     </div>
   )
