@@ -6,6 +6,7 @@ import {
   FitnessClubs,
   IdeasAndPicks,
   Brands,
+  Advantages,
 } from '../page-components'
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <IdeasAndPicks />
       <div className="main">
         <Brands />
+        <Advantages />
       </div>
     </>
   )

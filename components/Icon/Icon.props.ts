@@ -12,4 +12,8 @@ export interface IconProps
     | 'arrow'
     | 'menu'
     | 'star'
+    | 'hall'
+    | 'personal'
+    | 'help'
+    | 'callSerice'
 }
