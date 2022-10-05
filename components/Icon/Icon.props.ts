@@ -16,4 +16,12 @@ export interface IconProps
     | 'personal'
     | 'help'
     | 'callSerice'
+    | 'send'
+    | 'youtube'
+    | 'facebook'
+    | 'inst'
+    | 'paypal'
+    | 'webmoney'
+    | 'visa'
+    | 'mastercard'
 }

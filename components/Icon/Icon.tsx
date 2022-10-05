@@ -13,6 +13,14 @@ import CallService from './icons/call-service.svg'
 import Hall from './icons/hall.svg'
 import Help from './icons/help.svg'
 import Personal from './icons/personal.svg'
+import Send from './icons/send.svg'
+import Inst from './icons/inst.svg'
+import Youtube from './icons/youtube.svg'
+import Facebook from './icons/facebook.svg'
+import Visa from './icons/visa.svg'
+import MasterCard from './icons/mastercard.svg'
+import WebMoney from './icons/webmoney.svg'
+import Paypal from './icons/paypal.svg'
 
 export const Icon = ({ name, className }: IconProps): JSX.Element => {
   switch (name) {
@@ -42,7 +50,22 @@ export const Icon = ({ name, className }: IconProps): JSX.Element => {
       return <>{<CallService className={className} />}</>
     case 'help':
       return <>{<Help className={className} />}</>
-
+    case 'send':
+      return <>{<Send className={className} />}</>
+    case 'inst':
+      return <>{<Inst className={className} />}</>
+    case 'facebook':
+      return <>{<Facebook className={className} />}</>
+    case 'youtube':
+      return <>{<Youtube className={className} />}</>
+    case 'paypal':
+      return <>{<Paypal className={className} />}</>
+    case 'mastercard':
+      return <>{<MasterCard className={className} />}</>
+    case 'visa':
+      return <>{<Visa className={className} />}</>
+    case 'webmoney':
+      return <>{<WebMoney className={className} />}</>
     default:
       return <></>
   }
