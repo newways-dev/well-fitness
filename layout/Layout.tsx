@@ -8,8 +8,8 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <div className={styles.layout}>
       <Header className={styles.header} />
-      {/* <>{children}</>
-      <Footer className={styles.footer} /> */}
+      <>{children}</>
+      {/* <Footer className={styles.footer} /> */}
     </div>
   )
 }
