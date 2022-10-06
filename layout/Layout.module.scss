@@ -16,8 +16,12 @@
 .body {
   grid-column: body;
   max-width: 1410px;
-  width: 100%;
+
   margin: 0 auto;
+
+  // @media screen and (max-width: 1600px) {
+  //   padding: 0 20px;
+  // }
 }
 
 .footer {

@@ -19,18 +19,18 @@ const Home: NextPage = () => {
       <div className="slider">
         <Slider />
       </div>
-      {/* <div className="container">
-        <Equipments />
-        <FitnessClubs />
-        <Selections />
-      </div>
-      <IdeasAndPicks />
       <div className="container">
+        {/* <Equipments /> */}
+        {/* <FitnessClubs />
+        <Selections /> */}
+      </div>
+      {/* <IdeasAndPicks /> */}
+      {/* <div className="container">
         <Brands />
         <Advantages />
       </div>
-      <About />
-      <div className="container">
+      <About /> */}
+      {/* <div className="container">
         <CtA />
         <News />
       </div> */}
