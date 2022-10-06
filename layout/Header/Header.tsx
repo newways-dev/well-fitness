@@ -1,19 +1,21 @@
-import { Call, City, Dillers, Login } from '../../components'
+import { Call, City, Dillers, Login, Search } from '../../components'
 import { Navbar } from './Navbar/Navbar'
 import { Nav } from './Nav/Nav'
-import Logo from './logo.svg'
 
 import styles from './Header.module.scss'
 import { HeaderProps } from './Header.props'
+import { Favourites } from './Navbar/Favourites/Favourites'
+import { Menu } from './Menu/Menu'
+import { Logo } from './Logo/Logo'
 
 export const Header = ({}: HeaderProps): JSX.Element => {
   return (
     <>
       <div className={styles.header}>
         <div className={styles.wrapper}>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
+          <Logo className={styles.logo} />
+          {/* <div className={styles.logo}>
+          </div> */}
           <div className={styles.city}>
             <City city="Москва" />
           </div>
@@ -22,10 +24,19 @@ export const Header = ({}: HeaderProps): JSX.Element => {
           </div>
           <Call className={styles.call} />
           <Login className={styles.login} />
+          <div className={styles.search}>
+            <Search />
+          </div>
+          <div className={styles.favourites}>
+            <Favourites />
+          </div>
+          <div className={styles.menu}>
+            <Menu />
+          </div>
         </div>
       </div>
-      <Navbar />
-      <Nav />
+      <Navbar className={styles.navbar} />
+      <Nav className={styles.nav} />
     </>
   )
 }

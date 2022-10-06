@@ -15,18 +15,29 @@
   margin: 0 auto;
   display: grid;
   align-items: center;
+
+  @media screen and (max-width: 1500px) {
+    padding: 0 20px;
+  }
 }
 
 .dropdown {
   display: flex;
   align-items: center;
   height: 30px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
 }
 
 .home {
   cursor: pointer;
   padding-right: 30px;
   border-right: 1px solid var(--gray);
+  @media screen and (max-width: 400px) {
+    padding-right: 15px;
+  }
 }
 .arrow {
   margin-left: 10px;
@@ -37,4 +48,7 @@
 .fitness {
   cursor: pointer;
   margin-left: 30px;
+  @media screen and (max-width: 400px) {
+    margin-left: 15px;
+  }
 }

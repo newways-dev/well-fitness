@@ -1,10 +1,12 @@
 import { NavbarProps } from './Navbar.props'
 import { Button, Icon, Links, Search } from '../../../components'
 import styles from './Navbar.module.scss'
+import { Favourites } from './Favourites/Favourites'
+import clsx from 'clsx'
 
-export const Navbar = ({}: NavbarProps): JSX.Element => {
+export const Navbar = ({ className }: NavbarProps): JSX.Element => {
   return (
-    <div className={styles.navbar}>
+    <div className={clsx(styles.navbar, className)}>
       <div className={styles.wrapper}>
         <Button className={styles.button} variant="primary">
           <Icon className={styles.menuIcon} name="menu" />
@@ -12,11 +14,7 @@ export const Navbar = ({}: NavbarProps): JSX.Element => {
         </Button>
         <Search className={styles.search} />
         <Links className={styles.links} />
-        <div className={styles.icons}>
-          <Icon className={styles.icon} name="compare" />
-          <Icon name="favorites" />
-          <Icon name="cart" />
-        </div>
+        <Favourites className={styles.favourites} />
       </div>
     </div>
   )
