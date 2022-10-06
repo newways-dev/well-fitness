@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <div className="slider">
         <Slider />
       </div>
-      <div className="container">
+      {/* <div className="container">
         <Equipments />
         <FitnessClubs />
         <Selections />
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <div className="container">
         <CtA />
         <News />
-      </div>
+      </div> */}
     </>
   )
 }
