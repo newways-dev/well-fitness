@@ -1,9 +1,14 @@
+import clsx from 'clsx'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import { Icon } from '../../../components'
 import styles from './Nav.module.scss'
 
-export const Nav = (): JSX.Element => {
+export interface NavProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+
+export const Nav = ({ className }: NavProps) => {
   return (
-    <div className={styles.nav}>
+    <div className={clsx(styles.nav, className)}>
       <div className={styles.wrapper}>
         <div className={styles.dropdown}>
           <div className={styles.home}>

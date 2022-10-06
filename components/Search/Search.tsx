@@ -2,19 +2,12 @@ import clsx from 'clsx'
 import { SearchProps } from './Search.props'
 import SearchIcon from './search.svg'
 import styles from './Search.module.scss'
-import { useState } from 'react'
 
-export const Search = ({}: SearchProps): JSX.Element => {
-  const [active, setActive] = useState<boolean>(false)
-
+export const Search = ({ className }: SearchProps): JSX.Element => {
   return (
-    <div className={styles.wrapper}>
+    <div className={clsx(styles.wrapper, className)}>
       <div className={styles.search}>
-        <SearchIcon
-          onMouseOver={() => setActive(true)}
-          onMouseOut={() => setActive(false)}
-          className={styles.icon}
-        />
+        <SearchIcon className={styles.icon} />
       </div>
     </div>
   )

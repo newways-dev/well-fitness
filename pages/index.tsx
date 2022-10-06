@@ -10,23 +10,27 @@ import {
   About,
   CtA,
   News,
+  Slider,
 } from '../page-components'
 
 const Home: NextPage = () => {
   return (
     <>
-      <div className="wrapper">
+      <div className="slider">
+        <Slider />
+      </div>
+      <div className="container">
         <Equipments />
         <FitnessClubs />
         <Selections />
       </div>
       <IdeasAndPicks />
-      <div className="wrapper">
+      <div className="container">
         <Brands />
         <Advantages />
       </div>
       <About />
-      <div className="wrapper">
+      <div className="container">
         <CtA />
         <News />
       </div>
