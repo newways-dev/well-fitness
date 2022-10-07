@@ -22,25 +22,21 @@ function NextButton({ onClick }: NextButtonProps) {
 
 export const Selections = (): JSX.Element => {
   const buttons = ['Акция', 'Новинки', 'Мы рекомендуем']
-
   const width = useWindowSize()
-
-  console.log(width)
 
   const onClick = () => {}
   const settings = {
     infinite: true,
     speed: 500,
-    // slidesToShow: 4,
     slidesToShow:
-      width && width < 1200
+      width && width < 1340
         ? 3
-        : width && width < 720
+        : width && width < 820
         ? 2
         : width && width < 450
         ? 1
         : 4,
-    slidesToScroll: 1,
+    slidesToScroll: width && width < 450 ? 4 : 1,
     prevArrow: <></>,
     nextArrow: <NextButton onClick={onClick} />,
   }
@@ -48,7 +44,7 @@ export const Selections = (): JSX.Element => {
   return (
     <div className={styles.selectionsContainer}>
       <div className={styles.selections}>
-        <Tabs buttons={buttons} />
+        <Tabs className={styles.tabs} buttons={buttons} />
         <div className={styles.wrapper}>
           <Slider className={styles.slider} {...settings}>
             {discountProducts.map((product, index) => (

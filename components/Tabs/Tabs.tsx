@@ -7,11 +7,11 @@ export interface TabsProps
   buttons: string[]
 }
 
-export const Tabs = ({ buttons }: TabsProps) => {
+export const Tabs = ({ buttons, className }: TabsProps) => {
   const [active, setActive] = useState<number>(0)
 
   return (
-    <div className={styles.tabs}>
+    <div className={clsx(styles.tabs, className)}>
       {buttons.map((button, index) => (
         <span
           onClick={() => setActive(index)}
