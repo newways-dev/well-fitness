@@ -8,6 +8,7 @@ import { InStock } from '../InStock/InStock'
 import { Rating } from '../Rating/Rating'
 import { Button } from '../Button/Button'
 import clsx from 'clsx'
+import useWindowSize from '../../hooks/useWindowSize'
 
 export const ProductCard = ({
   badges,
@@ -15,12 +16,13 @@ export const ProductCard = ({
   image,
   inStock,
   title,
-  rating,
   price,
   oldPrice,
   button,
   className,
 }: ProductCardProps): JSX.Element => {
+  const width = useWindowSize()
+
   return (
     <article className={clsx(styles.productCard, className)}>
       <div className={styles.top}>
@@ -49,7 +51,7 @@ export const ProductCard = ({
           <span className={styles.price}>{price}</span>
           {oldPrice && <span className={styles.oldPrice}>{oldPrice}</span>}
         </div>
-        {button && (
+        {button && width && width > 720 && (
           <Button className={styles.button} variant="primary">
             <Icon name="cart" /> Купить
           </Button>
