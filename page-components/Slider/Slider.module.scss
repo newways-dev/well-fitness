@@ -71,11 +71,15 @@
 }
 
 .image {
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: right;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 
   img {
     width: 100%;

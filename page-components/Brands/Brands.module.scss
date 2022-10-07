@@ -13,6 +13,7 @@
       margin: 30px 0;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 30px;
 
       .categorie {
@@ -23,9 +24,12 @@
     }
 
     .companies {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto;
-      grid-template-rows: auto auto auto;
+      // display: grid;
+      // grid-template-columns: auto auto auto auto auto;
+      // grid-template-rows: auto auto auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       margin-bottom: 30px;
 
       .companie {
@@ -34,8 +38,15 @@
         justify-content: center;
         background: #fff;
         border: 1px solid rgba(133, 143, 164, 0.2);
-        width: 280px;
+        width: 25%;
         height: 170px;
+
+        @media screen and (max-width: 540px) {
+          width: 33%;
+        }
+        @media screen and (max-width: 450px) {
+          width: 50%;
+        }
       }
     }
   }
