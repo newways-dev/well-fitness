@@ -38,6 +38,19 @@ a {
   }
 }
 
+.slick-slider {
+  .slick-track {
+    display: flex;
+    gap: 30px;
+    @media screen and (max-width: 720px) {
+      gap: 15px;
+    }
+    @media screen and (max-width: 450px) {
+      gap: 10px;
+    }
+  }
+}
+
 :root {
   --dark-blue: #1a1a25;
   --red: #f53b49;

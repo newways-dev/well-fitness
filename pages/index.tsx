@@ -22,18 +22,18 @@ const Home: NextPage = () => {
       <div className="container">
         <Equipments />
         <FitnessClubs />
-        {/* <Selections /> */}
+        <Selections />
       </div>
-      {/* <IdeasAndPicks /> */}
-      {/* <div className="container">
+      <IdeasAndPicks />
+      <div className="container">
         <Brands />
         <Advantages />
       </div>
-      <About /> */}
-      {/* <div className="container">
+      <About />
+      <div className="container">
         <CtA />
         <News />
-      </div> */}
+      </div>
     </>
   )
 }
