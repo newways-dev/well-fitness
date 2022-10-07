@@ -16,16 +16,16 @@ import {
 const Home: NextPage = () => {
   return (
     <>
-      <div className="slider">
+      {/* <div className="slider">
         <Slider />
       </div>
       <div className="container">
         <Equipments />
         <FitnessClubs />
         <Selections />
-      </div>
+      </div> */}
       <IdeasAndPicks />
-      <div className="container">
+      {/*  <div className="container">
         <Brands />
         <Advantages />
       </div>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <div className="container">
         <CtA />
         <News />
-      </div>
+      </div> */}
     </>
   )
 }
