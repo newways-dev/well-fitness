@@ -21,8 +21,8 @@ const Home: NextPage = () => {
       </div>
       <div className="container">
         <Equipments />
-        {/* <FitnessClubs />
-        <Selections /> */}
+        <FitnessClubs />
+        {/* <Selections /> */}
       </div>
       {/* <IdeasAndPicks /> */}
       {/* <div className="container">
