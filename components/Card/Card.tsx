@@ -13,7 +13,7 @@ export const Card = ({ title, image, className }: CardProps): JSX.Element => {
         </Htag>
       </div>
       <div className={styles.image}>
-        <Image src={image} alt="" />
+        <Image layout="fill" className={styles.img} src={image} alt="" />
       </div>
     </div>
   )
