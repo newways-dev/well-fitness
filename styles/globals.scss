@@ -29,6 +29,10 @@ a {
 .container {
   max-width: 1410px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1440px) {
+    padding: 0 20px;
+  }
 }
 
 :root {

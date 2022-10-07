@@ -13,16 +13,15 @@
   grid-column: header;
 }
 
-.body {
-  grid-column: body;
-  max-width: 1410px;
+// .body {
+//   grid-column: body;
+//   max-width: 1410px;
+//   margin: 0 auto;
 
-  margin: 0 auto;
-
-  // @media screen and (max-width: 1600px) {
-  //   padding: 0 20px;
-  // }
-}
+//   @media screen and (max-width: 1600px) {
+//     padding: 0 20px;
+//   }
+// }
 
 .footer {
   grid-column: footer;

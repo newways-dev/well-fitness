@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <Slider />
       </div>
       <div className="container">
-        {/* <Equipments /> */}
+        <Equipments />
         {/* <FitnessClubs />
         <Selections /> */}
       </div>
