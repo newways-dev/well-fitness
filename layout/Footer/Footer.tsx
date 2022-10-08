@@ -50,24 +50,26 @@ export const Footer = ({}: FooterProps) => {
               <Input placeholder="Подписаться на рассылку" />
               <Icon name="send" />
             </div>
-            <div className={styles.numbers}>
-              <span className={styles.number}>
-                +7 (000) 000-00-00 для Москвы
-              </span>
-              <span className={styles.number}>
-                +8 (800) 000-00-00 для России
-              </span>
-              <span className={styles.makeCall}>Заказать звонок</span>
-            </div>
-            <div className={styles.emailSection}>
-              <span className={styles.email}>wellfitness@wellfit.ru</span>
-              <span className={styles.write}>Написать</span>
-            </div>
-            <div className={styles.politics}>
-              <span className={styles.politicsLink}>
-                Политика конфиденциальности
-              </span>
-              <span className={styles.politicsLink}>Публичная офферта</span>
+            <div className={styles.contactsInfo}>
+              <div className={styles.numbers}>
+                <span className={styles.number}>
+                  +7 (000) 000-00-00 для Москвы
+                </span>
+                <span className={styles.number}>
+                  +8 (800) 000-00-00 для России
+                </span>
+                <span className={styles.makeCall}>Заказать звонок</span>
+              </div>
+              <div className={styles.emailSection}>
+                <span className={styles.email}>wellfitness@wellfit.ru</span>
+                <span className={styles.write}>Написать</span>
+              </div>
+              <div className={styles.politics}>
+                <span className={styles.politicsLink}>
+                  Политика конфиденциальности
+                </span>
+                <span className={styles.politicsLink}>Публичная офферта</span>
+              </div>
             </div>
           </div>
         </div>
@@ -78,17 +80,21 @@ export const Footer = ({}: FooterProps) => {
               © WellFitness. 2022 Все права защищены
             </span>
           </div>
-          <div className={styles.social}>
-            <Icon name="inst" />
-            <Icon name="facebook" />
-            <Icon name="youtube" />
-          </div>
-          <Dillers />
-          <div className={styles.payment}>
-            <Icon name="visa" />
-            <Icon name="mastercard" />
-            <Icon name="webmoney" />
-            <Icon name="paypal" />
+          <div className={styles.additionContainer}>
+            <div className={styles.additionLinks}>
+              <div className={styles.social}>
+                <Icon name="inst" />
+                <Icon name="facebook" />
+                <Icon name="youtube" />
+              </div>
+              <Dillers />
+            </div>
+            <div className={styles.payment}>
+              <Icon name="visa" />
+              <Icon name="mastercard" />
+              <Icon name="webmoney" />
+              <Icon name="paypal" />
+            </div>
           </div>
         </div>
       </div>

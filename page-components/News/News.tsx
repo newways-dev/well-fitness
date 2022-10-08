@@ -32,7 +32,7 @@ export const News = () => {
         : width && width < 450
         ? 1
         : 4,
-    slidesToScroll: width && width < 450 ? 4 : 1,
+    slidesToScroll: width && width < 450 ? 2 : 1,
     prevArrow: <></>,
     nextArrow: <NextButton onClick={onClick} />,
   }

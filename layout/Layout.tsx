@@ -9,7 +9,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
     <div className={styles.layout}>
       <Header className={styles.header} />
       <div>{children}</div>
-      {/* <Footer className={styles.footer} /> */}
+      <Footer className={styles.footer} />
     </div>
   )
 }
