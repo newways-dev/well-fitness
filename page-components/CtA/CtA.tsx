@@ -9,13 +9,17 @@ export const CtA = () => {
     <div className={styles.cta}>
       <div className={styles.wrapper}>
         <div className={styles.left}>
-          <Image src={image} alt="" />
+          <div className={styles.image}>
+            <Image layout="responsive" src={image} alt="" />
+          </div>
         </div>
         <div className={styles.right}>
-          <Title className={styles.title}>
-            Станьте нашим партнером <span>и получите возможность</span>{' '}
-            представлять нашу продукцию в вашем регионе.
-          </Title>
+          <div>
+            <Title className={styles.title}>
+              Станьте нашим партнером <span>и получите возможность</span>{' '}
+              представлять нашу продукцию в вашем регионе.
+            </Title>
+          </div>
           <Button variant="outlined">Стать партнером</Button>
         </div>
       </div>
