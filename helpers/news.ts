@@ -23,4 +23,16 @@ export const news = [
     desc: 'Представляем тренажеры Nautilus 626 серии.',
     date: '2021.07.18',
   },
+  {
+    image: '/images/news/three.png',
+    title: 'В продажу поступили тренажеры Nautilus',
+    desc: 'Представляем тренажеры Nautilus 626 серии.',
+    date: '2021.07.18',
+  },
+  {
+    image: '/images/news/four.png',
+    title: 'В продажу поступили тренажеры Nautilus',
+    desc: 'Представляем тренажеры Nautilus 626 серии.',
+    date: '2021.07.18',
+  },
 ]
