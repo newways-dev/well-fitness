@@ -27,7 +27,7 @@ const Home: NextPage = () => {
       <IdeasAndPicks />
       <div className="container">
         <Brands />
-        {/* <Advantages /> */}
+        <Advantages />
       </div>
       {/* <About /> */}
       {/* <div className="container">
