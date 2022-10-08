@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <Brands />
         <Advantages />
       </div>
-      {/* <About /> */}
+      <About />
       {/* <div className="container">
         <CtA />
         <News />
