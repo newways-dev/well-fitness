@@ -24,4 +24,5 @@ export interface IconProps
     | 'webmoney'
     | 'visa'
     | 'mastercard'
+    | 'home'
 }

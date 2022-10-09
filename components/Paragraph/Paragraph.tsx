@@ -8,6 +8,6 @@ export interface ParagraphProps
   children: string
 }
 
-export const Paragraph = ({ children }: ParagraphProps) => {
-  return <p>{children}</p>
+export const Paragraph = ({ children, className }: ParagraphProps) => {
+  return <p className={className}>{children}</p>
 }

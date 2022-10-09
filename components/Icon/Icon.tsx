@@ -21,51 +21,54 @@ import Visa from './icons/visa.svg'
 import MasterCard from './icons/mastercard.svg'
 import WebMoney from './icons/webmoney.svg'
 import Paypal from './icons/paypal.svg'
+import Home from './icons/home.svg'
 
 export const Icon = ({ name, className }: IconProps): JSX.Element => {
   switch (name) {
     case 'arrow-down':
-      return <>{<ArrowDown className={className} />}</>
+      return <ArrowDown className={className} />
     case 'arrow':
-      return <>{<Arrow className={className} />}</>
+      return <Arrow className={className} />
     case 'user':
-      return <>{<User className={className} />}</>
+      return <User className={className} />
     case 'menu':
-      return <>{<Menu className={className} />}</>
+      return <Menu className={className} />
     case 'search':
-      return <>{<Search className={className} />}</>
+      return <Search className={className} />
     case 'compare':
-      return <>{<Compare className={className} />}</>
+      return <Compare className={className} />
     case 'favorites':
-      return <>{<Favorites className={className} />}</>
+      return <Favorites className={className} />
     case 'cart':
-      return <>{<Cart className={className} />}</>
+      return <Cart className={className} />
     case 'star':
-      return <>{<Star className={className} />}</>
+      return <Star className={className} />
     case 'hall':
-      return <>{<Hall className={className} />}</>
+      return <Hall className={className} />
     case 'personal':
-      return <>{<Personal className={className} />}</>
+      return <Personal className={className} />
     case 'callSerice':
-      return <>{<CallService className={className} />}</>
+      return <CallService className={className} />
     case 'help':
-      return <>{<Help className={className} />}</>
+      return <Help className={className} />
     case 'send':
-      return <>{<Send className={className} />}</>
+      return <Send className={className} />
     case 'inst':
-      return <>{<Inst className={className} />}</>
+      return <Inst className={className} />
     case 'facebook':
-      return <>{<Facebook className={className} />}</>
+      return <Facebook className={className} />
     case 'youtube':
-      return <>{<Youtube className={className} />}</>
+      return <Youtube className={className} />
     case 'paypal':
-      return <>{<Paypal className={className} />}</>
+      return <Paypal className={className} />
     case 'mastercard':
-      return <>{<MasterCard className={className} />}</>
+      return <MasterCard className={className} />
     case 'visa':
-      return <>{<Visa className={className} />}</>
+      return <Visa className={className} />
     case 'webmoney':
-      return <>{<WebMoney className={className} />}</>
+      return <WebMoney className={className} />
+    case 'home':
+      return <Home className={className} />
     default:
       return <></>
   }

@@ -9,6 +9,7 @@ import { Rating } from '../Rating/Rating'
 import { Button } from '../Button/Button'
 import clsx from 'clsx'
 import useWindowSize from '../../hooks/useWindowSize'
+import { Paragraph } from '../Paragraph/Paragraph'
 
 export const ProductCard = ({
   badges,
@@ -20,6 +21,7 @@ export const ProductCard = ({
   oldPrice,
   button,
   className,
+  characteristics,
 }: ProductCardProps): JSX.Element => {
   const width = useWindowSize()
 
@@ -45,6 +47,19 @@ export const ProductCard = ({
       <Htag className={styles.title} tag="h3">
         {title}
       </Htag>
+      {characteristics &&
+        characteristics.map((item, index) => (
+          <div className={styles.characteristics} key={index}>
+            <div className={styles.characteristic}>
+              <Paragraph className={styles.characteristicTitle}>
+                {item.title}
+              </Paragraph>
+              <Paragraph className={styles.characteristicDescription}>
+                {item.description}
+              </Paragraph>
+            </div>
+          </div>
+        ))}
       <Rating className={styles.rating} />
       <div className={styles.info}>
         <div className={styles.priceContainer}>
