@@ -1,0 +1,31 @@
+.categories {
+  .list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    list-style: none;
+  }
+
+  .item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    background: rgba(144, 156, 181, 0.2);
+    border-radius: 4px;
+    color: #384255;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .active {
+    color: #fff;
+    background: var(--red);
+  }
+}

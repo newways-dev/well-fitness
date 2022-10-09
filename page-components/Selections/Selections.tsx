@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import { Button, ProductCard, Tabs } from '../../components'
 import { SliderButton } from '../Slider/SliderButton/SliderButton'
-import { discountProducts } from '../../helpers/discountProducts'
+import { discount } from '../../helpers/discountProducts'
 
 import styles from './Selections.module.scss'
 import 'slick-carousel/slick/slick.css'
@@ -47,7 +47,7 @@ export const Selections = (): JSX.Element => {
         <Tabs className={styles.tabs} buttons={buttons} />
         <div className={styles.wrapper}>
           <Slider className={styles.slider} {...settings}>
-            {discountProducts.map((product, index) => (
+            {discount.map((product, index) => (
               <ProductCard
                 key={index}
                 className={styles.productCard}

@@ -1,0 +1,13 @@
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.location {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: rgba(56, 66, 85, 0.6);
+}

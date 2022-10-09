@@ -1,0 +1,35 @@
+.sort {
+  .list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    color: #384255;
+  }
+
+  .item {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    opacity: 0.5;
+  }
+
+  .active {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: url('./sort.png');
+      margin-right: 5px;
+    }
+  }
+}

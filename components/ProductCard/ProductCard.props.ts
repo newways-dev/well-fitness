@@ -8,17 +8,24 @@ export enum InStockEnum {
   coming,
 }
 
+type CharacteristicType = {
+  title: string
+  description: string
+}
+
 export interface ProductCardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  badges: string[]
-  icons: boolean
+  badges?: string[]
+  icons?: boolean
   inStock: InStockEnum
   image: string | StaticImageData
   title: string
   rating: number
   price: string
-  oldPrice: string
-  button: boolean
+  oldPrice?: string
+  button?: boolean
   imgW?: number
   imgH?: number
+  imgFill?: boolean
+  characteristics?: CharacteristicType[]
 }
