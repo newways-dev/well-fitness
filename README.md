@@ -11,19 +11,13 @@
 
 *This project was developed as a learning freelance assignment where we replicated an existing website in collaboration with the client*
 
-[Features](#-features) • [Tech Stack](#-tech-stack) • [Installation](#-installation) • [Project Structure](#-project-structure)
-
 </div>
-
----
 
 ## 📖 About
 
 **Well Fitness** is a comprehensive e-commerce platform designed for selling fitness equipment, gym supplies, and related products. The application features a modern, responsive design with intuitive navigation, product catalog, filtering capabilities, and a seamless shopping experience.
 
 This project was created as a **learning freelance assignment** where we worked closely with the client to replicate and rebuild an existing website. The collaboration involved understanding the original design, implementing the functionality, and ensuring pixel-perfect accuracy while learning modern web development practices.
-
----
 
 ## ✨ Features
 
@@ -91,7 +85,6 @@ This project was created as a **learning freelance assignment** where we worked 
 ![SVGR](https://img.shields.io/badge/SVGR-6.3.1-FFB13B?logo=webpack&logoColor=white)
 
 </div>
----
 
 ## 🎨 Key Components
 
@@ -130,40 +123,6 @@ Interactive image carousel featuring:
 
 ---
 
-## 📱 Pages Overview
-
-### Homepage (`/`)
-- Hero slider
-- Equipment categories
-- Fitness clubs section
-- Product selections
-- Ideas and picks
-- Brand showcase
-- Advantages
-- About section
-- News section
-
-### Cardio Equipment (`/cardio-equipments`)
-- Dedicated page for cardio machines
-- Filtered product listings
-- Category navigation
-
-### Fitness Clubs (`/fitness-clubs`)
-- Equipment solutions for gym facilities
-- Commercial-grade products
-- Bulk ordering options
-
-### For Home (`/for-home`)
-- Home fitness equipment catalog
-- Compact and space-saving options
-- Residential product focus
-
-### Ideas & Picks (`/ideas-and-picks`)
-- Curated product selections
-- Recommendations
-- Featured items
-
----
 
 ## 🎯 Development Notes
 
