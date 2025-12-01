@@ -1,4 +1,4 @@
-# 🏋️ Well Fitness - E-commerce Platform
+# Well Fitness - E-commerce Platform
 
 <div align="center">
 
