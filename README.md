@@ -1,9 +1,9 @@
 # Well Fitness
 
-![Next.js](https://img.shields.io/badge/Next.js-12-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.7-blue?logo=typescript)
-![Sass](https://img.shields.io/badge/Sass-1.54-CC6699?logo=sass)
-![Fiverr](https://img.shields.io/badge/Client-Fiverr-1DBF73?logo=fiverr&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-12-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.7-blue?style=for-the-badge&logo=typescript)
+![Sass](https://img.shields.io/badge/Sass-1.54-CC6699?style=for-the-badge&logo=sass)
+![Fiverr](https://img.shields.io/badge/Client-Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)
 
 Frontend for a fitness-equipment e-commerce storefront: category pages (cardio, fitness clubs, for home), product cards with pricing/ratings/stock status, a sort control, filter UI, and content sections (brands, news, ideas and picks) driven off static data.
 
