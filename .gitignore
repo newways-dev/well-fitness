@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# original stock photos, only optimized copies in public/images/stock are used
+/public/images/equipment/

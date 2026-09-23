@@ -7,8 +7,8 @@ export const youSaw = [
     inStock: InStockEnum.inStock,
     title: 'Treadmill CardioPower S35',
     rating: 5,
-    price: '1 134 900',
-    oldPrice: '1 154 900',
+    price: '€2,299',
+    oldPrice: '€2,499',
   },
   {
     image: '/images/forHome/one.png',
@@ -16,8 +16,8 @@ export const youSaw = [
     inStock: InStockEnum.littleLeft,
     title: 'Treadmill CardioPower S35',
     rating: 5,
-    price: '1 134 900',
-    oldPrice: '1 154 900',
+    price: '€2,299',
+    oldPrice: '€2,499',
   },
   {
     image: '/images/forHome/one.png',
@@ -25,8 +25,8 @@ export const youSaw = [
     inStock: InStockEnum.coming,
     title: 'Treadmill CardioPower S35',
     rating: 5,
-    price: '1 134 900',
-    oldPrice: '1 154 900',
+    price: '€2,299',
+    oldPrice: '€2,499',
   },
   {
     image: '/images/forHome/one.png',
@@ -34,7 +34,7 @@ export const youSaw = [
     inStock: InStockEnum.littleLeft,
     title: 'Treadmill CardioPower S35',
     rating: 5,
-    price: '1 134 900',
-    oldPrice: '1 154 900',
+    price: '€2,299',
+    oldPrice: '€2,499',
   },
 ]

@@ -180,10 +180,10 @@ describe('countActiveFilters', () => {
 })
 
 describe('formatPrice', () => {
-  it('groups thousands with spaces', () => {
-    expect(formatPrice(999)).toBe('999')
-    expect(formatPrice(34900)).toBe('34 900')
-    expect(formatPrice(1134900)).toBe('1 134 900')
+  it('prefixes the euro sign and groups thousands with commas', () => {
+    expect(formatPrice(999)).toBe('€999')
+    expect(formatPrice(34900)).toBe('€34,900')
+    expect(formatPrice(1134900)).toBe('€1,134,900')
   })
 })
 

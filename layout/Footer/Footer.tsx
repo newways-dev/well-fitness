@@ -53,15 +53,15 @@ export const Footer = ({}: FooterProps) => {
             <div className={styles.contactsInfo}>
               <div className={styles.numbers}>
                 <span className={styles.number}>
-                  +7 (000) 000-00-00 for Moscow
+                  +49 (0) 000 000 00 00 for Germany
                 </span>
                 <span className={styles.number}>
-                  +8 (800) 000-00-00 for Russia
+                  +00 800 000 00 00 for Europe (toll-free)
                 </span>
                 <span className={styles.makeCall}>Request a call</span>
               </div>
               <div className={styles.emailSection}>
-                <span className={styles.email}>wellfitness@wellfit.ru</span>
+                <span className={styles.email}>wellfitness@wellfit.eu</span>
                 <span className={styles.write}>Write to us</span>
               </div>
               <div className={styles.politics}>

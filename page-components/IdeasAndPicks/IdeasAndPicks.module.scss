@@ -36,9 +36,11 @@
     .image {
       position: relative;
       width: 25%;
+      aspect-ratio: 330 / 400;
 
       &:nth-child(1) {
         width: 50%;
+        aspect-ratio: 690 / 400;
         @media screen and (max-width: 780px) {
           width: 100%;
         }

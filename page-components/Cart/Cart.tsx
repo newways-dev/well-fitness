@@ -65,7 +65,7 @@ export const Cart = () => {
               </Htag>
               <InStock value={product.inStock} />
               <span className={styles.unitPrice}>
-                {formatPrice(product.price)} ₽ each
+                {formatPrice(product.price)} each
               </span>
             </div>
             <div className={styles.quantity}>
@@ -92,7 +92,7 @@ export const Cart = () => {
               </button>
             </div>
             <div className={styles.lineTotal}>
-              {formatPrice(product.price * quantity)} ₽
+              {formatPrice(product.price * quantity)}
             </div>
             <button
               type="button"
@@ -111,11 +111,11 @@ export const Cart = () => {
         </Htag>
         <div className={styles.row}>
           <span>{pluralizeProducts(itemsCount)}</span>
-          <span>{formatPrice(total)} ₽</span>
+          <span>{formatPrice(total)}</span>
         </div>
         <div className={styles.total}>
           <span>Total</span>
-          <span>{formatPrice(total)} ₽</span>
+          <span>{formatPrice(total)}</span>
         </div>
         <Button
           className={styles.order}
