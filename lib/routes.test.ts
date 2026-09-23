@@ -95,6 +95,7 @@ describe('site navigation', () => {
       'fitness-clubs',
       'for-home',
       'ideas-and-picks',
+      'cart',
       '404',
     ]
     reserved.forEach((slug) => expect(stubSlugs.has(slug)).toBe(false))

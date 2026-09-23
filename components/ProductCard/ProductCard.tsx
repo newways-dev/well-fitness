@@ -21,10 +21,13 @@ export const ProductCard = ({
   price,
   oldPrice,
   button,
+  onBuy,
+  cartQuantity = 0,
   className,
   characteristics,
 }: ProductCardProps): JSX.Element => {
   const width = useWindowSize()
+  const showButton = button && (onBuy || (width && width > 720))
 
   return (
     <article className={clsx(styles.productCard, className)}>
@@ -67,9 +70,10 @@ export const ProductCard = ({
           <span className={styles.price}>{price}</span>
           {oldPrice && <span className={styles.oldPrice}>{oldPrice}</span>}
         </div>
-        {button && width && width > 720 && (
-          <Button className={styles.button} variant="primary">
-            <Icon name="cart" /> Купить
+        {showButton && (
+          <Button className={styles.button} variant="primary" onClick={onBuy}>
+            <Icon name="cart" />{' '}
+            {cartQuantity > 0 ? `В корзине (${cartQuantity})` : 'Купить'}
           </Button>
         )}
       </div>

@@ -30,6 +30,7 @@ import {
   toggleFilter,
 } from '../../lib/catalog'
 import { parseCategoryIndex } from '../../lib/routes'
+import { useCart } from '../../context/CartContext'
 
 const sortOptions: { key: SortKey; label: string }[] = [
   { key: 'popularity', label: 'По популярности' },
@@ -40,6 +41,7 @@ const sortOptions: { key: SortKey; label: string }[] = [
 
 export const CardioEquipments = () => {
   const router = useRouter()
+  const { add, quantityOf } = useCart()
   const [activeCategory, setActiveCategory] = useState(0)
 
   useEffect(() => {
@@ -100,6 +102,8 @@ export const CardioEquipments = () => {
                 }
                 inStock={product.inStock}
                 button={true}
+                onBuy={() => add(product.id)}
+                cartQuantity={quantityOf(product.id)}
                 key={product.id}
               />
             ))}
