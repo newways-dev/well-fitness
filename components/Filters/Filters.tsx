@@ -7,17 +7,25 @@ export interface FiltersProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   title: string
   types: string[]
+  selected: string[]
+  onToggle: (type: string) => void
 }
 
-export const Filters = ({ title, types }: FiltersProps) => {
+export const Filters = ({ title, types, selected, onToggle }: FiltersProps) => {
   return (
     <div className={styles.filters}>
       <Title className={styles.title}>{title}</Title>
       <ul className={styles.list}>
-        {types.map((type, index) => (
-          <li className={styles.item} key={index}>
-            <Checkbox className={styles.checkbox} />
-            {type}
+        {types.map((type) => (
+          <li className={styles.item} key={type}>
+            <label className={styles.label}>
+              <Checkbox
+                className={styles.checkbox}
+                checked={selected.includes(type)}
+                onChange={() => onToggle(type)}
+              />
+              {type}
+            </label>
           </li>
         ))}
       </ul>

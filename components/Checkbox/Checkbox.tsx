@@ -1,13 +1,15 @@
 import clsx from 'clsx'
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { InputHTMLAttributes } from 'react'
 import styles from './Checkbox.module.scss'
 
-export interface CheckboxProps
-  extends DetailedHTMLProps<
-    HTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {}
+export interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const Checkbox = ({ className }: CheckboxProps) => {
-  return <input type="checkbox" className={clsx(styles.checkbox, className)} />
+export const Checkbox = ({ className, ...props }: CheckboxProps) => {
+  return (
+    <input
+      type="checkbox"
+      className={clsx(styles.checkbox, className)}
+      {...props}
+    />
+  )
 }

@@ -17,6 +17,7 @@ export const ProductCard = ({
   image,
   inStock,
   title,
+  rating,
   price,
   oldPrice,
   button,
@@ -60,7 +61,7 @@ export const ProductCard = ({
             </div>
           </div>
         ))}
-      <Rating className={styles.rating} />
+      <Rating className={styles.rating} value={rating} />
       <div className={styles.info}>
         <div className={styles.priceContainer}>
           <span className={styles.price}>{price}</span>

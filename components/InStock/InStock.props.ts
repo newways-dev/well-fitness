@@ -3,5 +3,5 @@ import { InStockEnum } from '../ProductCard/ProductCard.props'
 
 export interface InStockProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  value: InStockEnum
+  value?: InStockEnum
 }

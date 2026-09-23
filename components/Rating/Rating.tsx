@@ -3,15 +3,22 @@ import styles from './Rating.module.scss'
 import { Icon } from '../Icon/Icon'
 import clsx from 'clsx'
 
-export const Rating = ({ className }: RatingProps): JSX.Element => {
+const STARS = [1, 2, 3, 4, 5]
+
+export const Rating = ({ className, value = 5 }: RatingProps): JSX.Element => {
   return (
-    <div className={clsx(styles.rating, className)}>
+    <div
+      className={clsx(styles.rating, className)}
+      aria-label={`Рейтинг ${value} из 5`}
+    >
       <span className={styles.title}>Рейтинг</span>
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
-      <Icon name="star" />
+      {STARS.map((star) => (
+        <Icon
+          key={star}
+          name="star"
+          className={clsx({ [styles.inactive]: star > value })}
+        />
+      ))}
     </div>
   )
 }

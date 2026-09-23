@@ -1,22 +1,34 @@
 import clsx from 'clsx'
-import { useState } from 'react'
 import styles from './Sort.module.scss'
 
-const sort = ['По популярности', 'По новизне', 'По цене', 'По рейтингу']
+export interface SortOption<T extends string = string> {
+  key: T
+  label: string
+}
 
-export const Sort = () => {
-  const [active, setActive] = useState<number>(0)
+export interface SortProps<T extends string = string> {
+  options: SortOption<T>[]
+  value: T
+  onChange: (key: T) => void
+}
 
+export const Sort = <T extends string>({
+  options,
+  value,
+  onChange,
+}: SortProps<T>) => {
   return (
     <div className={styles.sort}>
       <ul className={styles.list}>
-        {sort.map((sortItem, index) => (
+        {options.map((option) => (
           <li
-            onClick={() => setActive(index)}
-            key={index}
-            className={clsx(styles.item, { [styles.active]: active === index })}
+            onClick={() => onChange(option.key)}
+            key={option.key}
+            className={clsx(styles.item, {
+              [styles.active]: value === option.key,
+            })}
           >
-            {sortItem}
+            {option.label}
           </li>
         ))}
       </ul>
