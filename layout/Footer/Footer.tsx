@@ -1,5 +1,5 @@
 import { FooterProps } from './Footer.props'
-import { Dillers, Icon, Input, Title } from '../../components'
+import { Dillers, Icon, Input, LabelLink, Title } from '../../components'
 import Logo from './logo.svg'
 
 import styles from './Footer.module.scss'
@@ -16,7 +16,7 @@ export const Footer = ({}: FooterProps) => {
               <Title className={styles.title}>{catalog[0].title}</Title>
               {catalog[0].links.map((link) => (
                 <li className={styles.link} key={link}>
-                  {link}
+                  <LabelLink label={link} />
                 </li>
               ))}
             </ul>
@@ -24,7 +24,7 @@ export const Footer = ({}: FooterProps) => {
               <Title className={styles.title}>{help[0].title}</Title>
               {help[0].links.map((link) => (
                 <li className={styles.link} key={link}>
-                  {link}
+                  <LabelLink label={link} />
                 </li>
               ))}
             </ul>
@@ -32,7 +32,7 @@ export const Footer = ({}: FooterProps) => {
               <Title className={styles.title}>{services[0].title}</Title>
               {services[0].links.map((link) => (
                 <li className={styles.link} key={link}>
-                  {link}
+                  <LabelLink label={link} />
                 </li>
               ))}
             </ul>
@@ -40,7 +40,7 @@ export const Footer = ({}: FooterProps) => {
               <Title className={styles.title}>{about[0].title}</Title>
               {about[0].links.map((link) => (
                 <li className={styles.link} key={link}>
-                  {link}
+                  <LabelLink label={link} />
                 </li>
               ))}
             </ul>

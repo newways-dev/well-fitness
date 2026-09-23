@@ -14,7 +14,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
   )
 }
 
-export const withLayout = <T extends Record<string, unknown>>(
+export const withLayout = <T extends object>(
   Component: FC<T>
 ) => {
   return function withLayoutComponent(props: T): JSX.Element {

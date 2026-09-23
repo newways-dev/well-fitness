@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Icon from '../logo.svg'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
 
@@ -7,7 +8,11 @@ export interface LogoProps
 export const Logo = ({ className }: LogoProps) => {
   return (
     <div className={className}>
-      <Icon />
+      <Link href="/">
+        <a aria-label="На главную">
+          <Icon />
+        </a>
+      </Link>
     </div>
   )
 }

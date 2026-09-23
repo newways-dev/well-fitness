@@ -9,6 +9,11 @@
   font-weight: 400;
   font-size: 14px;
   color: #fff;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
 
   &:not(:last-child) {
     margin-right: 36px;

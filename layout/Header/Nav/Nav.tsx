@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { DetailedHTMLProps, HTMLAttributes } from 'react'
-import { Icon } from '../../../components'
+import { Icon, LabelLink } from '../../../components'
 import styles from './Nav.module.scss'
 
 export interface NavProps
@@ -12,16 +12,16 @@ export const Nav = ({ className }: NavProps) => {
       <div className={styles.wrapper}>
         <div className={styles.dropdown}>
           <div className={styles.home}>
-            <span>
+            <LabelLink label="Для дома">
               Для дома
               <Icon className={styles.arrow} name="arrow-down" />
-            </span>
+            </LabelLink>
           </div>
           <div className={styles.fitness}>
-            <span>
+            <LabelLink label="Для фитнес клуба">
               Для фитнес клуба
               <Icon className={styles.arrow} name="arrow-down" />
-            </span>
+            </LabelLink>
           </div>
         </div>
       </div>

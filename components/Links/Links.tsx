@@ -1,5 +1,6 @@
 import { LinksProps } from './Links.props'
 import { links } from './linksArray'
+import { LabelLink } from '../LabelLink/LabelLink'
 import styles from './Links.module.scss'
 
 export const Links = ({}: LinksProps): JSX.Element => {
@@ -7,7 +8,7 @@ export const Links = ({}: LinksProps): JSX.Element => {
     <ul className={styles.list}>
       {links.map((link) => (
         <li key={link} className={styles.link}>
-          {link}
+          <LabelLink label={link} />
         </li>
       ))}
     </ul>

@@ -4,8 +4,11 @@
   gap: 15px;
 }
 
+.crumb:hover {
+  color: var(--red);
+}
+
 .location {
-  cursor: pointer;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;

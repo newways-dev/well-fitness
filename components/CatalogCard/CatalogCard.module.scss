@@ -33,6 +33,10 @@
       font-weight: 800;
       font-size: 20px;
       line-height: 120%;
+
+      .titleLink:hover {
+        color: var(--red);
+      }
     }
 
     .list {
@@ -55,6 +59,13 @@
 
         &:hover {
           color: var(--red);
+        }
+
+        .itemLink {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
         }
 
         .quantity {

@@ -8,6 +8,13 @@
     justify-content: space-between;
   }
 
+  .summary {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #384255;
+    opacity: 0.6;
+  }
+
   .wrapper {
     .productsWrapper {
       margin-top: 30px;
@@ -28,7 +35,33 @@
         }
       }
 
+      .empty {
+        width: 100%;
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .emptyTitle {
+        font-size: 16px;
+        color: #384255;
+      }
+
       .filters {
+        .reset {
+          margin-top: 20px;
+          margin-left: 30px;
+          padding: 0;
+          border: 0;
+          background: none;
+          cursor: pointer;
+          font-size: 14px;
+          text-decoration: underline;
+          color: #384255;
+        }
       }
     }
   }

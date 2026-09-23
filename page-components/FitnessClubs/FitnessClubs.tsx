@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { FitnessClubsProps } from './FitnessClubs.props'
 import { Button, Card, Htag } from '../../components'
 import styles from './FitnessClubs.module.scss'
@@ -12,6 +13,8 @@ import seven from './images/seven.png'
 import { Title } from '../Title/Title'
 
 export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
+  const router = useRouter()
+
   return (
     <div className={styles.fitnessClubs}>
       <Title title="Для фитнес клубов" />
@@ -48,7 +51,11 @@ export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
         />
         <Card className={styles.seven} title="Свободные веса" image={seven} />
       </div>
-      <Button className={styles.button} variant="outlined">
+      <Button
+        className={styles.button}
+        variant="outlined"
+        onClick={() => router.push('/fitness-clubs')}
+      >
         Все категории
       </Button>
     </div>

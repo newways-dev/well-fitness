@@ -17,7 +17,7 @@ export interface ProductCardProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   badges?: string[]
   icons?: boolean
-  inStock: InStockEnum
+  inStock?: InStockEnum
   image: string | StaticImageData
   title: string
   rating: number

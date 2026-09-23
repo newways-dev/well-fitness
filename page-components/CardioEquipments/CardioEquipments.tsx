@@ -1,67 +1,147 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useEffect, useMemo, useState } from 'react'
 import styles from './CardioEquipments.module.scss'
 
 import banner from './banner.png'
 import image from './CardioEquipmentsB37.png'
-import { Categories, Filters, ProductCard, Sort } from '../../components'
-import { cardioEquipments } from '../../helpers/cardioEquipments'
+import {
+  Button,
+  Categories,
+  Filters,
+  ProductCard,
+  Sort,
+} from '../../components'
+import {
+  cardioEquipments,
+  categories,
+  filtersTypes,
+} from '../../helpers/cardioEquipments'
+import {
+  ActiveFilters,
+  FilterGroup,
+  SortKey,
+  countActiveFilters,
+  emptyFilters,
+  filterProducts,
+  formatPrice,
+  pluralizeProducts,
+  sortProducts,
+  toggleFilter,
+} from '../../lib/catalog'
+import { parseCategoryIndex } from '../../lib/routes'
 
-const categories = [
-  'Беговые дорожки',
-  'Эллиптические',
-  'Велотренажеры',
-  'Cтепперы',
-  'Горнолыжные',
-  'Гребные тренажеры',
+const sortOptions: { key: SortKey; label: string }[] = [
+  { key: 'popularity', label: 'По популярности' },
+  { key: 'novelty', label: 'По новизне' },
+  { key: 'price', label: 'По цене' },
+  { key: 'rating', label: 'По рейтингу' },
 ]
 
-const filtersTypes = {
-  producer: [
-    'Gym80',
-    'CardioPower',
-    'Original Fitness',
-    'Nautilus',
-    'Sole Fitness',
-    'True Fitness',
-    'Smith Strength',
-  ],
-  functionality: ['Самые продвинутые', 'Компактные', 'С моб. приложением'],
-  discount: ['Акция', 'Новинки', 'В наличии', 'Наш выбор'],
-}
-
 export const CardioEquipments = () => {
+  const router = useRouter()
+  const [activeCategory, setActiveCategory] = useState(0)
+
+  useEffect(() => {
+    if (router.isReady) {
+      setActiveCategory(
+        parseCategoryIndex(router.query.category, categories.length),
+      )
+    }
+  }, [router.isReady, router.query.category])
+  const [sortKey, setSortKey] = useState<SortKey>('popularity')
+  const [filters, setFilters] = useState<ActiveFilters>(emptyFilters)
+
+  const products = useMemo(
+    () =>
+      sortProducts(
+        filterProducts(cardioEquipments, filters, categories[activeCategory]),
+        sortKey,
+      ),
+    [activeCategory, filters, sortKey],
+  )
+
+  const activeFiltersCount = countActiveFilters(filters)
+
+  const handleToggle = (group: FilterGroup) => (value: string) =>
+    setFilters((current) => toggleFilter(current, group, value))
+
   return (
     <div className={styles.cardioEquipments}>
       <div className={styles.wrapper}>
         <Image src={banner} alt="" />
         <div className={styles.sort}>
-          <Categories categories={categories} />
-          <Sort />
+          <Categories
+            categories={categories}
+            active={activeCategory}
+            onChange={setActiveCategory}
+          />
+          <Sort options={sortOptions} value={sortKey} onChange={setSortKey} />
+        </div>
+        <div className={styles.summary} aria-live="polite">
+          {pluralizeProducts(products.length)}
         </div>
         <div className={styles.productsWrapper}>
           <div className={styles.products}>
-            {cardioEquipments.map((product, index) => (
+            {products.map((product) => (
               <ProductCard
                 className={styles.productCard}
+                badges={product.badges}
+                icons={true}
                 characteristics={product.characteristics}
                 title={product.title}
                 rating={product.rating}
-                price={product.price}
+                price={`${formatPrice(product.price)} ₽`}
                 image={image}
-                oldPrice={product.oldPrice}
+                oldPrice={
+                  product.oldPrice
+                    ? `${formatPrice(product.oldPrice)} ₽`
+                    : undefined
+                }
                 inStock={product.inStock}
                 button={true}
-                key={index}
+                key={product.id}
               />
             ))}
+            {products.length === 0 && (
+              <div className={styles.empty}>
+                <p className={styles.emptyTitle}>
+                  По выбранным параметрам ничего не найдено
+                </p>
+                <Button variant="outlined" onClick={() => setFilters(emptyFilters)}>
+                  Сбросить фильтры
+                </Button>
+              </div>
+            )}
           </div>
           <div className={styles.filters}>
-            <Filters title="Производители" types={filtersTypes.producer} />
+            <Filters
+              title="Производители"
+              types={filtersTypes.producer}
+              selected={filters.producer}
+              onToggle={handleToggle('producer')}
+            />
             <Filters
               title="Функциональность"
               types={filtersTypes.functionality}
+              selected={filters.functionality}
+              onToggle={handleToggle('functionality')}
             />
-            <Filters title="Акция, наличие" types={filtersTypes.discount} />
+            <Filters
+              title="Акция, наличие"
+              types={filtersTypes.discount}
+              selected={filters.discount}
+              onToggle={handleToggle('discount')}
+            />
+            {activeFiltersCount > 0 && (
+              <button
+                type="button"
+                className={styles.reset}
+                onClick={() => setFilters(emptyFilters)}
+              >
+                Сбросить фильтры ({activeFiltersCount})
+              </button>
+            )}
           </div>
         </div>
       </div>

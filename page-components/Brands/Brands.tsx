@@ -15,7 +15,7 @@ export const Brands = () => {
   ]
 
   return (
-    <div className={styles.brands}>
+    <div id="brands" className={styles.brands}>
       <div className={styles.wrapper}>
         <Title title="Популярные бренды" />
         <div className={styles.categories}>
