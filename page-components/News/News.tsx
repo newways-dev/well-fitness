@@ -18,7 +18,7 @@ function NextButton({ onClick }: NextButtonProps) {
 
 export const News = () => {
   const width = useWindowSize()
-  const buttons = ['Новости', 'Блог']
+  const buttons = ['News', 'Blog']
 
   const onClick = () => {}
   const settings = {

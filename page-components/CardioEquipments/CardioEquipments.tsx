@@ -33,10 +33,10 @@ import { parseCategoryIndex } from '../../lib/routes'
 import { useCart } from '../../context/CartContext'
 
 const sortOptions: { key: SortKey; label: string }[] = [
-  { key: 'popularity', label: 'По популярности' },
-  { key: 'novelty', label: 'По новизне' },
-  { key: 'price', label: 'По цене' },
-  { key: 'rating', label: 'По рейтингу' },
+  { key: 'popularity', label: 'Most popular' },
+  { key: 'novelty', label: 'Newest' },
+  { key: 'price', label: 'Price' },
+  { key: 'rating', label: 'Top rated' },
 ]
 
 export const CardioEquipments = () => {
@@ -110,29 +110,29 @@ export const CardioEquipments = () => {
             {products.length === 0 && (
               <div className={styles.empty}>
                 <p className={styles.emptyTitle}>
-                  По выбранным параметрам ничего не найдено
+                  No products match the selected filters
                 </p>
                 <Button variant="outlined" onClick={() => setFilters(emptyFilters)}>
-                  Сбросить фильтры
+                  Reset filters
                 </Button>
               </div>
             )}
           </div>
           <div className={styles.filters}>
             <Filters
-              title="Производители"
+              title="Manufacturers"
               types={filtersTypes.producer}
               selected={filters.producer}
               onToggle={handleToggle('producer')}
             />
             <Filters
-              title="Функциональность"
+              title="Features"
               types={filtersTypes.functionality}
               selected={filters.functionality}
               onToggle={handleToggle('functionality')}
             />
             <Filters
-              title="Акция, наличие"
+              title="Deals & availability"
               types={filtersTypes.discount}
               selected={filters.discount}
               onToggle={handleToggle('discount')}
@@ -143,7 +143,7 @@ export const CardioEquipments = () => {
                 className={styles.reset}
                 onClick={() => setFilters(emptyFilters)}
               >
-                Сбросить фильтры ({activeFiltersCount})
+                Reset filters ({activeFiltersCount})
               </button>
             )}
           </div>

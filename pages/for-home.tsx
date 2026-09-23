@@ -9,7 +9,7 @@ const ForHome: NextPage = () => {
   return (
     <>
       <div className="container">
-        <Heading title="Тренажены для дома" location="Тренажеры для дома" />
+        <Heading title="Home equipment" location="Home equipment" />
         <Catalog catalog={forHomeCatalog} />
       </div>
       <IdeasAndPicks />

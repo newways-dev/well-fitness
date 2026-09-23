@@ -8,7 +8,7 @@ import { Title } from '../Title/Title'
 export const YouSaw = () => {
   return (
     <div className={styles.youSaw}>
-      <Title title="Вы смотрели" />
+      <Title title="Recently viewed" />
       <div className={styles.wrapper}>
         {youSaw.map((product, index) => (
           <ProductCard

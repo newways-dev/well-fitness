@@ -21,7 +21,7 @@ function NextButton({ onClick }: NextButtonProps) {
 }
 
 export const Selections = (): JSX.Element => {
-  const buttons = ['Акция', 'Новинки', 'Мы рекомендуем']
+  const buttons = ['Sale', 'New arrivals', 'We recommend']
   const width = useWindowSize()
 
   const onClick = () => {}

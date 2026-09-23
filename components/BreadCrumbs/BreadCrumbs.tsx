@@ -19,7 +19,7 @@ export const BreadCrumbs = ({ className, location }: BreadCrumbsProps) => {
   return (
     <div className={clsx(styles.breadCrumbs, className)}>
       <Link href="/">
-        <a aria-label="Главная">
+        <a aria-label="Home">
           <Icon name="home" />
         </a>
       </Link>

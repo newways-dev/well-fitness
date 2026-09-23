@@ -9,7 +9,7 @@ export const Logo = ({ className }: LogoProps) => {
   return (
     <div className={className}>
       <Link href="/">
-        <a aria-label="На главную">
+        <a aria-label="Back to home">
           <Icon />
         </a>
       </Link>

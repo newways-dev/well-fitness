@@ -7,7 +7,7 @@ const IdeasAndPicks: NextPage = () => {
   return (
     <>
       <div className="container">
-        <Heading title="Идеи и подборки" location="Идеи и подборки" />
+        <Heading title="Ideas & collections" location="Ideas & collections" />
         <IdeasSection />
         <YouSaw />
       </div>

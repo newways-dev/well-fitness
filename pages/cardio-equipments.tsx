@@ -8,8 +8,8 @@ const CardioEquipmentsPage: NextPage = () => {
     <>
       <div className="container">
         <Heading
-          title="Кардиотренажеры"
-          location="Для фитнес клубов > Кардиотренажеры"
+          title="Cardio equipment"
+          location="For fitness clubs > Cardio equipment"
         />
         <CardioEquipments />
       </div>

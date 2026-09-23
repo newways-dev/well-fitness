@@ -15,7 +15,7 @@ export const IdeasAndPicks = ({}: IdeasAndPicksProps) => {
   return (
     <div className={styles.ideasAndPicks}>
       <div className={styles.wrapper}>
-        <SectionTitle className={styles.title} title="Идеи и подборки" />
+        <SectionTitle className={styles.title} title="Ideas & collections" />
         <div className={styles.cards}>
           <div className={styles.image}>
             <Image layout="intrinsic" src={banner} alt="" />
@@ -28,7 +28,7 @@ export const IdeasAndPicks = ({}: IdeasAndPicksProps) => {
           </div>
         </div>
         <Button className={styles.button} variant="outlined">
-          Полная подборка
+          Full collection
         </Button>
       </div>
     </div>

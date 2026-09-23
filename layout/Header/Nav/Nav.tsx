@@ -12,14 +12,14 @@ export const Nav = ({ className }: NavProps) => {
       <div className={styles.wrapper}>
         <div className={styles.dropdown}>
           <div className={styles.home}>
-            <LabelLink label="Для дома">
-              Для дома
+            <LabelLink label="For home">
+              For home
               <Icon className={styles.arrow} name="arrow-down" />
             </LabelLink>
           </div>
           <div className={styles.fitness}>
-            <LabelLink label="Для фитнес клуба">
-              Для фитнес клуба
+            <LabelLink label="For fitness clubs">
+              For fitness clubs
               <Icon className={styles.arrow} name="arrow-down" />
             </LabelLink>
           </div>

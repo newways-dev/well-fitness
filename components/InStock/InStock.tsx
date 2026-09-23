@@ -9,28 +9,28 @@ export const InStock = ({ value, className }: InStockProps) => {
     case InStockEnum.notInStock:
       return (
         <span className={clsx(styles.no, className)}>
-          Нет в наличии
+          Out of stock
           <Circles stock={InStockEnum.notInStock} />
         </span>
       )
     case InStockEnum.inStock:
       return (
         <span className={clsx(styles.ok, className)}>
-          В наличии
+          In stock
           <Circles stock={InStockEnum.inStock} />
         </span>
       )
     case InStockEnum.littleLeft:
       return (
         <span className={clsx(styles.little, className)}>
-          Осталось немного
+          Low stock
           <Circles stock={InStockEnum.littleLeft} />
         </span>
       )
     case InStockEnum.coming:
       return (
         <span className={clsx(styles.coming, className)}>
-          Скоро ожидается
+          Coming soon
           <Circles stock={InStockEnum.coming} />
         </span>
       )

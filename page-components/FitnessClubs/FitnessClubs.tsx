@@ -17,46 +17,46 @@ export const FitnessClubs = ({}: FitnessClubsProps): JSX.Element => {
 
   return (
     <div className={styles.fitnessClubs}>
-      <Title title="Для фитнес клубов" />
+      <Title title="For fitness clubs" />
       <div className={styles.wrapper}>
         <Card
           className={styles.one}
-          title="Профессиональные кардиотренажеры"
+          title="Professional cardio equipment"
           image={one}
         />
         <Card
           className={styles.two}
-          title="Грузоблочные тренажеры"
+          title="Selectorized machines"
           image={two}
         />
         <Card
           className={styles.three}
-          title="Тренажеры на свободных весах"
+          title="Free weight machines"
           image={three}
         />
         <Card
           className={styles.four}
-          title="Функциональный тренинг"
+          title="Functional training"
           image={four}
         />
         <Card
           className={styles.five}
-          title="Wellness, СПА, Массаж"
+          title="Wellness, spa, massage"
           image={five}
         />
         <Card
           className={styles.six}
-          title="Спортивная медицина и реабилитация"
+          title="Sports medicine and rehabilitation"
           image={six}
         />
-        <Card className={styles.seven} title="Свободные веса" image={seven} />
+        <Card className={styles.seven} title="Free weights" image={seven} />
       </div>
       <Button
         className={styles.button}
         variant="outlined"
         onClick={() => router.push('/fitness-clubs')}
       >
-        Все категории
+        All categories
       </Button>
     </div>
   )

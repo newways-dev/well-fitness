@@ -20,33 +20,33 @@ export const Equipments = ({}: EquipmentsProps): JSX.Element => {
 
   return (
     <div id="catalog" className={styles.equipments}>
-      <Title title="Тренажеры для дома" />
+      <Title title="Home equipment" />
       <div className={styles.wrapper}>
-        <Card className={styles.one} title="Беговые дорожки" image={one} />
+        <Card className={styles.one} title="Treadmills" image={one} />
         <Card
           className={styles.two}
-          title="Эллиптические тренажеры"
+          title="Elliptical trainers"
           image={two}
         />
-        <Card className={styles.three} title="Велотренажеры" image={three} />
+        <Card className={styles.three} title="Exercise bikes" image={three} />
         <Card
           className={styles.four}
-          title="Горнолыжные тренажеры"
+          title="Ski trainers"
           image={four}
         />
-        <Card className={styles.five} title="Силовые тренажеры" image={five} />
-        <Card className={styles.six} title="Гребные тренажеры" image={six} />
-        <Card className={styles.seven} title="Батуты" image={seven} />
-        <Card className={styles.eight} title="Игровые столы" image={eight} />
-        <Card className={styles.nine} title="Массажные кресла" image={nine} />
-        <Card className={styles.ten} title="Фитнес аксессуары" image={ten} />
+        <Card className={styles.five} title="Strength machines" image={five} />
+        <Card className={styles.six} title="Rowing machines" image={six} />
+        <Card className={styles.seven} title="Trampolines" image={seven} />
+        <Card className={styles.eight} title="Game tables" image={eight} />
+        <Card className={styles.nine} title="Massage chairs" image={nine} />
+        <Card className={styles.ten} title="Fitness accessories" image={ten} />
       </div>
       <Button
         className={styles.button}
         variant="outlined"
         onClick={() => router.push('/for-home')}
       >
-        Все категории
+        All categories
       </Button>
     </div>
   )

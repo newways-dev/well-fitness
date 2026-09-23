@@ -5,27 +5,27 @@ import styles from './Advantages.module.scss'
 const advantages = [
   {
     icon: <Icon name="help" />,
-    title: 'Помощь покупателю',
-    desc: 'Узнайте как приобрести товар, способы доставки и оплаты, а также условия гарантии.',
-    link: 'Подробнее',
+    title: 'Customer help',
+    desc: 'Learn how to buy, delivery and payment options, and warranty terms.',
+    link: 'Learn more',
   },
   {
     icon: <Icon name="callSerice" />,
-    title: 'Заявка на сервис',
-    desc: 'Оставьте заявку на проведение гарантийного и постгарантийного ремонта.',
-    link: 'Оставить заявку ',
+    title: 'Service request',
+    desc: 'Submit a request for warranty and post-warranty repairs.',
+    link: 'Submit a request ',
   },
   {
     icon: <Icon name="personal" />,
-    title: 'Личный кабинет партнера B2B',
-    desc: 'Личный кабинет дилера с доступом к информационным материалам',
-    link: 'Стать партнером',
+    title: 'B2B partner account',
+    desc: 'Dealer account with access to informational materials',
+    link: 'Become a partner',
   },
   {
     icon: <Icon name="hall" />,
-    title: 'Выставочный зал',
-    desc: 'Оставьте заявку на посещение шоу-рума в Москве',
-    link: 'Записаться',
+    title: 'Showroom',
+    desc: 'Request a visit to our showroom in Moscow',
+    link: 'Book a visit',
   },
 ]
 
