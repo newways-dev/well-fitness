@@ -5,6 +5,12 @@
   flex-wrap: wrap;
   gap: 30px;
 
-  @media screen and (max-width: 1400px) {
+  .item {
+    width: calc(50% - 15px);
+    aspect-ratio: 690 / 400;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
   }
 }

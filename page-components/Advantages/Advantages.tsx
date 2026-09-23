@@ -24,7 +24,7 @@ const advantages = [
   {
     icon: <Icon name="hall" />,
     title: 'Showroom',
-    desc: 'Request a visit to our showroom in Moscow',
+    desc: 'Request a visit to our showroom in Berlin',
     link: 'Book a visit',
   },
 ]

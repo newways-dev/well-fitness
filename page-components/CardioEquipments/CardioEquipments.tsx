@@ -1,11 +1,10 @@
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
 import styles from './CardioEquipments.module.scss'
 
-import banner from './banner.png'
 import image from './CardioEquipmentsB37.png'
 import {
+  Banner,
   Button,
   Categories,
   Filters,
@@ -71,7 +70,18 @@ export const CardioEquipments = () => {
   return (
     <div className={styles.cardioEquipments}>
       <div className={styles.wrapper}>
-        <Image src={banner} alt="" />
+        <div className={styles.hero}>
+          <Banner
+            image="/images/stock/hero-treadmills.jpg"
+            title="Treadmills for"
+            highlight="marathon training"
+            caption="Pro-grade cushioning, quiet motors and smart programs."
+            imagePosition="center 62%"
+            action={<Button variant="primary">Learn more</Button>}
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className={styles.sort}>
           <Categories
             categories={categories}
@@ -93,11 +103,11 @@ export const CardioEquipments = () => {
                 characteristics={product.characteristics}
                 title={product.title}
                 rating={product.rating}
-                price={`${formatPrice(product.price)} ₽`}
+                price={formatPrice(product.price)}
                 image={image}
                 oldPrice={
                   product.oldPrice
-                    ? `${formatPrice(product.oldPrice)} ₽`
+                    ? formatPrice(product.oldPrice)
                     : undefined
                 }
                 inStock={product.inStock}

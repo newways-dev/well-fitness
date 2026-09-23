@@ -107,7 +107,7 @@ export function countActiveFilters(filters: ActiveFilters): number {
 }
 
 export function formatPrice(value: number): string {
-  return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+  return `€${String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`
 }
 
 export function pluralizeProducts(count: number): string {
