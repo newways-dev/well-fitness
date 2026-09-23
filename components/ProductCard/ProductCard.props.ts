@@ -24,6 +24,8 @@ export interface ProductCardProps
   price: string
   oldPrice?: string
   button?: boolean
+  onBuy?: () => void
+  cartQuantity?: number
   imgW?: number
   imgH?: number
   imgFill?: boolean
