@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 20px;
+}
+
 html,
 body {
   margin: 0;

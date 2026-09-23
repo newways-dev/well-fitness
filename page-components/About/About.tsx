@@ -7,7 +7,7 @@ import map from './images/map.png'
 
 export const About = () => {
   return (
-    <div className={styles.about}>
+    <div id="about" className={styles.about}>
       <div className={styles.wrapper}>
         <div className={styles.info}>
           <SectionTitle title="О компании" />

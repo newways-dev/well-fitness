@@ -38,7 +38,7 @@ export const News = () => {
   }
 
   return (
-    <div className={styles.newsContainer}>
+    <div id="news" className={styles.newsContainer}>
       <div className={styles.news}>
         <Tabs buttons={buttons} />
         <div className={styles.wrapper}>

@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { useMemo, useState } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useMemo, useState } from 'react'
 import styles from './CardioEquipments.module.scss'
 
 import banner from './banner.png'
@@ -28,6 +29,7 @@ import {
   sortProducts,
   toggleFilter,
 } from '../../lib/catalog'
+import { parseCategoryIndex } from '../../lib/routes'
 
 const sortOptions: { key: SortKey; label: string }[] = [
   { key: 'popularity', label: 'По популярности' },
@@ -37,7 +39,16 @@ const sortOptions: { key: SortKey; label: string }[] = [
 ]
 
 export const CardioEquipments = () => {
+  const router = useRouter()
   const [activeCategory, setActiveCategory] = useState(0)
+
+  useEffect(() => {
+    if (router.isReady) {
+      setActiveCategory(
+        parseCategoryIndex(router.query.category, categories.length),
+      )
+    }
+  }, [router.isReady, router.query.category])
   const [sortKey, setSortKey] = useState<SortKey>('popularity')
   const [filters, setFilters] = useState<ActiveFilters>(emptyFilters)
 
