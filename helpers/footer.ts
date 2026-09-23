@@ -1,59 +1,59 @@
 export const catalog = [
   {
-    title: 'Каталог',
+    title: 'Catalog',
     links: [
-      'Для дома',
-      'Для фитнес клубов',
-      'Акции',
-      'Идеи и подборки ',
-      'Новинки',
-      'Наши бренды',
+      'For home',
+      'For fitness clubs',
+      'Sales',
+      'Ideas & collections ',
+      'New arrivals',
+      'Our brands',
     ],
   },
 ]
 
 export const help = [
   {
-    title: 'Поддержка',
+    title: 'Support',
     links: [
-      'Доставка и оплата',
-      'Условия возврата',
-      'Сервисная заявка',
-      'Обслуживание фитнес клубов',
+      'Delivery & payment',
+      'Return policy',
+      'Service request',
+      'Fitness club servicing',
       'FAQ',
-      'Инструкции',
-      'Гарантия',
+      'Manuals',
+      'Warranty',
     ],
   },
 ]
 
 export const services = [
   {
-    title: 'Услуги',
+    title: 'Services',
     links: [
-      '3D проект',
-      'Консалтинг',
-      'Бизнес планирование',
-      'Лизинг',
+      '3D design',
+      'Consulting',
+      'Business planning',
+      'Leasing',
       'FAQ',
       'Trade-IN',
-      'В рассрочку',
+      'Installments',
     ],
   },
 ]
 
 export const about = [
   {
-    title: 'О компании',
+    title: 'About us',
     links: [
-      'О нас',
-      'Наша миссия ',
-      'Наша команда ',
-      'Наши проекты',
-      'Новости',
-      'Блог',
-      'Где купить',
-      'Контакты',
+      'Our story',
+      'Our mission ',
+      'Our team ',
+      'Our projects',
+      'News',
+      'Blog',
+      'Where to buy',
+      'Contacts',
     ],
   },
 ]

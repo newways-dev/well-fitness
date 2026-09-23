@@ -15,7 +15,7 @@ import type { Product } from './catalog'
 
 const make = (id: number, price: number): Product => ({
   id,
-  category: 'Беговые дорожки',
+  category: 'Treadmills',
   producer: 'CardioPower',
   title: `Item ${id}`,
   price,

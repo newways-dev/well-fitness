@@ -13,7 +13,7 @@ import {
 
 const make = (overrides: Partial<Product>): Product => ({
   id: 1,
-  category: 'Беговые дорожки',
+  category: 'Treadmills',
   producer: 'CardioPower',
   title: 'Item',
   price: 1000,
@@ -37,7 +37,7 @@ const products: Product[] = [
     popularity: 10,
     addedAt: '2026-01-01',
     oldPrice: 400,
-    functionality: ['Компактные'],
+    functionality: ['Compact'],
   }),
   make({
     id: 2,
@@ -51,7 +51,7 @@ const products: Product[] = [
   }),
   make({
     id: 3,
-    category: 'Эллиптические',
+    category: 'Elliptical trainers',
     producer: 'Nautilus',
     price: 200,
     rating: 4,
@@ -59,7 +59,7 @@ const products: Product[] = [
     addedAt: '2026-02-01',
     isChoice: true,
     inStock: InStockEnum.littleLeft,
-    functionality: ['Компактные', 'С моб. приложением'],
+    functionality: ['Compact', 'With mobile app'],
   }),
 ]
 
@@ -72,7 +72,7 @@ describe('filterProducts', () => {
 
   it('filters by category', () => {
     expect(
-      ids(filterProducts(products, emptyFilters, 'Эллиптические')),
+      ids(filterProducts(products, emptyFilters, 'Elliptical trainers')),
     ).toEqual([3])
   })
 
@@ -85,21 +85,21 @@ describe('filterProducts', () => {
     const filters = {
       ...emptyFilters,
       producer: ['Nautilus'],
-      functionality: ['Компактные'],
+      functionality: ['Compact'],
     }
     expect(ids(filterProducts(products, filters))).toEqual([3])
   })
 
   it('applies discount filters', () => {
     expect(
-      ids(filterProducts(products, { ...emptyFilters, discount: ['Акция'] })),
+      ids(filterProducts(products, { ...emptyFilters, discount: ['Sale'] })),
     ).toEqual([1])
     expect(
-      ids(filterProducts(products, { ...emptyFilters, discount: ['Новинки'] })),
+      ids(filterProducts(products, { ...emptyFilters, discount: ['New arrivals'] })),
     ).toEqual([2])
     expect(
       ids(
-        filterProducts(products, { ...emptyFilters, discount: ['Наш выбор'] }),
+        filterProducts(products, { ...emptyFilters, discount: ['Our pick'] }),
       ),
     ).toEqual([3])
   })
@@ -107,7 +107,7 @@ describe('filterProducts', () => {
   it('treats "in stock" as available or little left, not out of stock', () => {
     expect(
       ids(
-        filterProducts(products, { ...emptyFilters, discount: ['В наличии'] }),
+        filterProducts(products, { ...emptyFilters, discount: ['In stock'] }),
       ),
     ).toEqual([1, 3])
   })
@@ -162,7 +162,7 @@ describe('toggleFilter', () => {
   })
 
   it('does not mutate the previous state', () => {
-    toggleFilter(emptyFilters, 'discount', 'Акция')
+    toggleFilter(emptyFilters, 'discount', 'Sale')
     expect(emptyFilters.discount).toEqual([])
   })
 })
@@ -188,13 +188,10 @@ describe('formatPrice', () => {
 })
 
 describe('pluralizeProducts', () => {
-  it('uses the right Russian plural form', () => {
-    expect(pluralizeProducts(0)).toBe('0 товаров')
-    expect(pluralizeProducts(1)).toBe('1 товар')
-    expect(pluralizeProducts(2)).toBe('2 товара')
-    expect(pluralizeProducts(5)).toBe('5 товаров')
-    expect(pluralizeProducts(11)).toBe('11 товаров')
-    expect(pluralizeProducts(21)).toBe('21 товар')
-    expect(pluralizeProducts(112)).toBe('112 товаров')
+  it('uses singular only for exactly one product', () => {
+    expect(pluralizeProducts(0)).toBe('0 products')
+    expect(pluralizeProducts(1)).toBe('1 product')
+    expect(pluralizeProducts(2)).toBe('2 products')
+    expect(pluralizeProducts(21)).toBe('21 products')
   })
 })

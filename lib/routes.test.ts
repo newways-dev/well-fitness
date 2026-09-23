@@ -27,50 +27,50 @@ describe('parseCategoryIndex', () => {
 })
 
 describe('slugify', () => {
-  it('transliterates cyrillic labels', () => {
-    expect(slugify('Доставка и оплата')).toBe('dostavka-i-oplata')
-    expect(slugify('Где купить')).toBe('gde-kupit')
-    expect(slugify('Спортивная медицина и реабилитация')).toBe(
-      'sportivnaya-meditsina-i-reabilitatsiya',
+  it('lowercases and hyphenates labels', () => {
+    expect(slugify('Where to buy')).toBe('where-to-buy')
+    expect(slugify('Sports medicine and rehabilitation')).toBe(
+      'sports-medicine-and-rehabilitation',
     )
   })
 
-  it('trims and collapses separators', () => {
-    expect(slugify('  Wellness, СПА, Массаж ')).toBe('wellness-spa-massazh')
+  it('replaces ampersands and collapses separators', () => {
+    expect(slugify('Delivery & payment')).toBe('delivery-and-payment')
+    expect(slugify('  Wellness, spa, massage ')).toBe('wellness-spa-massage')
     expect(slugify('Trade-IN')).toBe('trade-in')
   })
 
   it('keeps digits', () => {
-    expect(slugify('3D проект')).toBe('3d-proekt')
+    expect(slugify('3D design')).toBe('3d-design')
   })
 })
 
 describe('hrefFor', () => {
   it('returns known routes and anchors', () => {
-    expect(hrefFor('Для дома')).toBe('/for-home')
-    expect(hrefFor('Бренды')).toBe('/#brands')
-    expect(hrefFor('Блог')).toBe('/#news')
+    expect(hrefFor('For home')).toBe('/for-home')
+    expect(hrefFor('Brands')).toBe('/#brands')
+    expect(hrefFor('Blog')).toBe('/#news')
   })
 
   it('ignores surrounding whitespace', () => {
-    expect(hrefFor('Идеи и подборки ')).toBe('/ideas-and-picks')
+    expect(hrefFor('Ideas & collections ')).toBe('/ideas-and-picks')
   })
 
   it('deep-links cardio categories', () => {
-    expect(hrefFor('Беговые дорожки')).toBe('/cardio-equipments?category=0')
-    expect(hrefFor('Гребные тренажеры')).toBe('/cardio-equipments?category=5')
+    expect(hrefFor('Treadmills')).toBe('/cardio-equipments?category=0')
+    expect(hrefFor('Rowing machines')).toBe('/cardio-equipments?category=5')
   })
 
   it('falls back to a stub slug for unknown labels', () => {
-    expect(hrefFor('Контакты')).toBe('/kontakty')
+    expect(hrefFor('Contacts')).toBe('/contacts')
   })
 })
 
 describe('collectStubPages', () => {
   it('skips known routes and dedupes by slug', () => {
-    const pages = collectStubPages(['Контакты', 'Контакты ', 'Для дома', 'FAQ'])
+    const pages = collectStubPages(['Contacts', 'Contacts ', 'For home', 'FAQ'])
     expect(pages).toEqual([
-      { slug: 'kontakty', title: 'Контакты' },
+      { slug: 'contacts', title: 'Contacts' },
       { slug: 'faq', title: 'FAQ' },
     ])
   })

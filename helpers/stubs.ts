@@ -5,17 +5,17 @@ import { forHomeCatalog } from './forHome'
 import { about, catalog, help, services } from './footer'
 
 export const homeCardLabels = [
-  'Силовые тренажеры',
-  'Батуты',
-  'Игровые столы',
-  'Массажные кресла',
-  'Фитнес аксессуары',
-  'Грузоблочные тренажеры',
-  'Тренажеры на свободных весах',
-  'Функциональный тренинг',
-  'Wellness, СПА, Массаж',
-  'Спортивная медицина и реабилитация',
-  'Свободные веса',
+  'Strength machines',
+  'Trampolines',
+  'Game tables',
+  'Massage chairs',
+  'Fitness accessories',
+  'Selectorized machines',
+  'Free weight machines',
+  'Functional training',
+  'Wellness, spa, massage',
+  'Sports medicine and rehabilitation',
+  'Free weights',
 ]
 
 const catalogLabels = [...forHomeCatalog, ...fitnessClubs].flatMap((item) => [

@@ -16,11 +16,11 @@ export const CtA = () => {
         <div className={styles.right}>
           <div>
             <Title className={styles.title}>
-              Станьте нашим партнером <span>и получите возможность</span>{' '}
-              представлять нашу продукцию в вашем регионе.
+              Become our partner <span>and get the opportunity</span>{' '}
+              to represent our products in your region.
             </Title>
           </div>
-          <Button variant="outlined">Стать партнером</Button>
+          <Button variant="outlined">Become a partner</Button>
         </div>
       </div>
     </div>

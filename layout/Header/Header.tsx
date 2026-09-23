@@ -17,7 +17,7 @@ export const Header = ({}: HeaderProps): JSX.Element => {
           {/* <div className={styles.logo}>
           </div> */}
           <div className={styles.city}>
-            <City city="Москва" />
+            <City city="Moscow" />
           </div>
           <div className={styles.dillers}>
             <Dillers />

@@ -10,23 +10,23 @@ export const About = () => {
     <div id="about" className={styles.about}>
       <div className={styles.wrapper}>
         <div className={styles.info}>
-          <SectionTitle title="О компании" />
+          <SectionTitle title="About us" />
           <div className={styles.text}>
             <Title className={styles.title}>
-              Надежный партнер с 2005 года для сотен компаний от Калининграда
-              до Владивостока.
+              A reliable partner since 2005 for hundreds of companies from Kaliningrad
+              to Vladivostok.
             </Title>
             <span className={styles.desc}>
-              Оптима Импорт — один из самых крупных импортеров
-              фитнес-оборудования, эксклюзивно представляет на российском рынке
-              ведущих мировых производителей: Sole Fitness, Optima Fitness,
-              Halley, Marcy, SKI Simulator и др.
+              Optima Import is one of the largest importers of
+              fitness equipment, exclusively representing on the Russian market
+              leading global manufacturers: Sole Fitness, Optima Fitness,
+              Halley, Marcy, SKI Simulator and others.
               <br />
-              Мы предлагаем широкий спектр самой современной и качественной
-              продукции как для домашнего, так и для коммерческого фитнеса.
+              We offer a wide range of the most modern and high-quality
+              products for both home and commercial fitness.
             </span>
           </div>
-          <Button variant="outlined">Подробнее о компании</Button>
+          <Button variant="outlined">More about the company</Button>
         </div>
         <div className={styles.map}>
           <Image src={map} alt="" />

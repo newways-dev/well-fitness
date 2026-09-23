@@ -47,28 +47,28 @@ export const Footer = ({}: FooterProps) => {
           </div>
           <div className={styles.contacts}>
             <div className={styles.subscribe}>
-              <Input placeholder="Подписаться на рассылку" />
+              <Input placeholder="Subscribe to our newsletter" />
               <Icon name="send" />
             </div>
             <div className={styles.contactsInfo}>
               <div className={styles.numbers}>
                 <span className={styles.number}>
-                  +7 (000) 000-00-00 для Москвы
+                  +7 (000) 000-00-00 for Moscow
                 </span>
                 <span className={styles.number}>
-                  +8 (800) 000-00-00 для России
+                  +8 (800) 000-00-00 for Russia
                 </span>
-                <span className={styles.makeCall}>Заказать звонок</span>
+                <span className={styles.makeCall}>Request a call</span>
               </div>
               <div className={styles.emailSection}>
                 <span className={styles.email}>wellfitness@wellfit.ru</span>
-                <span className={styles.write}>Написать</span>
+                <span className={styles.write}>Write to us</span>
               </div>
               <div className={styles.politics}>
                 <span className={styles.politicsLink}>
-                  Политика конфиденциальности
+                  Privacy policy
                 </span>
-                <span className={styles.politicsLink}>Публичная офферта</span>
+                <span className={styles.politicsLink}>Public offer</span>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export const Footer = ({}: FooterProps) => {
           <div className={styles.logo}>
             <Logo />
             <span className={styles.rights}>
-              © WellFitness. 2022 Все права защищены
+              © WellFitness. 2022 All rights reserved
             </span>
           </div>
           <div className={styles.additionContainer}>

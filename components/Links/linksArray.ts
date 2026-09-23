@@ -1,10 +1,10 @@
 export const links = [
-  'Бренды',
-  'Сервис',
-  'Услуги',
-  'Поддержка',
-  'О компании',
-  'Блог',
-  'Где купить',
-  'Контакты',
+  'Brands',
+  'Service',
+  'Services',
+  'Support',
+  'About us',
+  'Blog',
+  'Where to buy',
+  'Contacts',
 ]

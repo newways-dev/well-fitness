@@ -30,16 +30,16 @@ export const Cart = () => {
     return (
       <div className={styles.empty}>
         <Htag tag="h2" className={styles.emptyTitle}>
-          Корзина пуста
+          Your cart is empty
         </Htag>
         <p className={styles.emptyText}>
-          Добавьте тренажеры из каталога, и они появятся здесь.
+          Add equipment from the catalog and it will show up here.
         </p>
         <Button
           variant="primary"
           onClick={() => router.push('/cardio-equipments')}
         >
-          Перейти в каталог
+          Browse the catalog
         </Button>
       </div>
     )
@@ -65,14 +65,14 @@ export const Cart = () => {
               </Htag>
               <InStock value={product.inStock} />
               <span className={styles.unitPrice}>
-                {formatPrice(product.price)} ₽ за шт.
+                {formatPrice(product.price)} ₽ each
               </span>
             </div>
             <div className={styles.quantity}>
               <button
                 type="button"
                 className={styles.step}
-                aria-label="Уменьшить количество"
+                aria-label="Decrease quantity"
                 disabled={quantity <= 1}
                 onClick={() => setQuantity(product.id, quantity - 1)}
               >
@@ -84,7 +84,7 @@ export const Cart = () => {
               <button
                 type="button"
                 className={styles.step}
-                aria-label="Увеличить количество"
+                aria-label="Increase quantity"
                 disabled={quantity >= MAX_QUANTITY}
                 onClick={() => setQuantity(product.id, quantity + 1)}
               >
@@ -97,7 +97,7 @@ export const Cart = () => {
             <button
               type="button"
               className={styles.remove}
-              aria-label={`Удалить ${product.title}`}
+              aria-label={`Remove ${product.title}`}
               onClick={() => remove(product.id)}
             >
               ×
@@ -107,14 +107,14 @@ export const Cart = () => {
       </ul>
       <aside className={styles.summary}>
         <Htag tag="h2" className={styles.summaryTitle}>
-          Ваш заказ
+          Your order
         </Htag>
         <div className={styles.row}>
           <span>{pluralizeProducts(itemsCount)}</span>
           <span>{formatPrice(total)} ₽</span>
         </div>
         <div className={styles.total}>
-          <span>Итого</span>
+          <span>Total</span>
           <span>{formatPrice(total)} ₽</span>
         </div>
         <Button
@@ -122,15 +122,15 @@ export const Cart = () => {
           variant="primary"
           onClick={() => setOrdered(true)}
         >
-          Оформить заказ
+          Checkout
         </Button>
         {ordered && (
           <p className={styles.notice} role="status">
-            Это витрина без бэкенда: оформление заказа не подключено.
+            This is a storefront demo without a backend: checkout is not connected.
           </p>
         )}
         <button type="button" className={styles.clear} onClick={clear}>
-          Очистить корзину
+          Clear cart
         </button>
       </aside>
     </div>

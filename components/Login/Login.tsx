@@ -8,7 +8,7 @@ export const Login = ({ className }: LoginProps): JSX.Element => {
   return (
     <div className={clsx(styles.login, className)}>
       <a href="" className={styles.link}>
-        Войти
+        Log in
       </a>
       <Icon className={styles.icon} name="user" />
     </div>

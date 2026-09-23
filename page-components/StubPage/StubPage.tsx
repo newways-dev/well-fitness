@@ -14,14 +14,14 @@ export const StubPage = ({ title }: StubPageProps) => {
       <Heading title={title} location={title} />
       <div className={styles.stub}>
         <Htag tag="h2" className={styles.message}>
-          Раздел в разработке
+          Section under construction
         </Htag>
         <p className={styles.description}>
-          Страница «{title}» скоро появится. Пока можно вернуться на главную и
-          продолжить выбор оборудования.
+          The “{title}” page is coming soon. For now you can go back to the home page and
+          keep browsing equipment.
         </p>
         <Button variant="primary" onClick={() => router.push('/')}>
-          На главную
+          Back to home
         </Button>
       </div>
     </div>

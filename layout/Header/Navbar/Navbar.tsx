@@ -17,7 +17,7 @@ export const Navbar = ({ className }: NavbarProps): JSX.Element => {
           onClick={() => router.push('/#catalog')}
         >
           <Icon className={styles.menuIcon} name="menu" />
-          Каталог
+          Catalog
         </Button>
         <Search className={styles.search} />
         <Links className={styles.links} />

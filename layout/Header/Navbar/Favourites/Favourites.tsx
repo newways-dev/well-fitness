@@ -18,7 +18,7 @@ export const Favourites = ({ className }: FavouritesProps) => {
       <Link href="/cart">
         <a
           className={styles.cart}
-          aria-label={count > 0 ? `Корзина, товаров: ${count}` : 'Корзина'}
+          aria-label={count > 0 ? `Cart, items: ${count}` : 'Cart'}
         >
           <Icon name="cart" />
           {count > 0 && <span className={styles.badge}>{count}</span>}

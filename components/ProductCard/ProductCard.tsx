@@ -73,7 +73,7 @@ export const ProductCard = ({
         {showButton && (
           <Button className={styles.button} variant="primary" onClick={onBuy}>
             <Icon name="cart" />{' '}
-            {cartQuantity > 0 ? `В корзине (${cartQuantity})` : 'Купить'}
+            {cartQuantity > 0 ? `In cart (${cartQuantity})` : 'Buy'}
           </Button>
         )}
       </div>

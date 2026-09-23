@@ -6,18 +6,18 @@ import { brands } from './images'
 
 export const Brands = () => {
   const categories = [
-    'Беговые дорожки',
-    'Эллиптические тренажеры',
-    'Велотренажеры',
-    'Силовые тренажеры',
-    'Батуты',
-    'Игровые столы',
+    'Treadmills',
+    'Elliptical trainers',
+    'Exercise bikes',
+    'Strength machines',
+    'Trampolines',
+    'Game tables',
   ]
 
   return (
     <div id="brands" className={styles.brands}>
       <div className={styles.wrapper}>
-        <Title title="Популярные бренды" />
+        <Title title="Popular brands" />
         <div className={styles.categories}>
           {categories.map((categorie) => (
             <span className={styles.categorie} key={categorie}>
@@ -32,7 +32,7 @@ export const Brands = () => {
             </div>
           ))}
         </div>
-        <Button variant="outlined">Все бренды</Button>
+        <Button variant="outlined">All brands</Button>
       </div>
     </div>
   )

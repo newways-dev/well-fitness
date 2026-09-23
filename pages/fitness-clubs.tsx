@@ -9,8 +9,8 @@ const ForHome: NextPage = () => {
     <>
       <div className="container">
         <Heading
-          title="Тренажены для фитнес клубов"
-          location="Тренажеры для фитнес клубов"
+          title="Equipment for fitness clubs"
+          location="Equipment for fitness clubs"
         />
         <Catalog catalog={fitnessClubs} />
       </div>

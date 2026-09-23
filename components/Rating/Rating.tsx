@@ -9,9 +9,9 @@ export const Rating = ({ className, value = 5 }: RatingProps): JSX.Element => {
   return (
     <div
       className={clsx(styles.rating, className)}
-      aria-label={`Рейтинг ${value} из 5`}
+      aria-label={`Rating ${value} out of 5`}
     >
-      <span className={styles.title}>Рейтинг</span>
+      <span className={styles.title}>Rating</span>
       {STARS.map((star) => (
         <Icon
           key={star}

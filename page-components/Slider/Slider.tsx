@@ -15,12 +15,12 @@ export const Slider = (): JSX.Element => {
           </Htag>
           <p className={styles.description}>
             <span className={styles.bold}>
-              Бег с нулевой <br /> ударной <br /> нагрузкой <br />
+              Running with zero <br /> impact <br /> on your <br />
             </span>{' '}
-            на суставы
+            joints
           </p>
           <Button className={styles.learnMore} variant="outlined">
-            Узнать больше
+            Learn more
           </Button>
         </div>
         <div className={styles.image}>

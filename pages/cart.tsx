@@ -6,7 +6,7 @@ import { Cart } from '../page-components'
 const CartPage: NextPage = () => {
   return (
     <div className="container">
-      <Heading title="Корзина" location="Корзина" />
+      <Heading title="Cart" location="Cart" />
       <Cart />
     </div>
   )
